@@ -1,4 +1,53 @@
-<h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand me-auto" href="index.html">
+        <img src="../assets/images/onon_logo-sm.svg" 
+             alt="onon_logo-sm"
+             class="d-md-none">
+        <img src="../assets/images/onon_logo.svg" 
+             alt="onon_logo"
+             class="d-none d-md-block">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-6 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">最新消息</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">商品介紹</a>
+        </li> 
+        <li>
+          <form class="position-relative">
+            <input class="form-control input-search" type="search" placeholder="輸入關鍵字">
+            <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link">
+            <span class="material-symbols-outlined align-bottom">search</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link">
+            <div class="position-relative">
+              <span class="material-symbols-outlined fill align-bottom"> shopping_cart</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
+            </div>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-primary">註冊/登入
+          </button>
+        </li>
+      </ul>
+      
+      下次接續：搜尋欄的icon
+      
+    </div>
+  </div>
+</nav>
+
+
