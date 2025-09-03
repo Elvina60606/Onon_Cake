@@ -1,32 +1,79 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand me-auto" href="index.html">
+    <a class="navbar-brand me-auto py-0" href="index.html">
         <img src="../assets/images/onon_logo-sm.svg" 
              alt="onon_logo-sm"
-             class="d-md-none">
+             class="d-lg-none">
         <img src="../assets/images/onon_logo.svg" 
              alt="onon_logo"
-             class="d-none d-md-block">
+             class="d-none d-lg-block">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="nav-link d-lg-none">
+      <div class="position-relative">
+        <span class="material-symbols-outlined fill align-bottom text-primary"> shopping_cart</span>
+        <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
+      </div>
+    </button>
+    <button class="navbar-toggler border-0" type="button"   
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="material-symbols-outlined">menu</span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-6 align-items-center">
+<!--mobile header-->
+      <ul class="navbar-nav ms-auto mb-5 align-items-center d-lg-none">
+        <form class="position-relative d-lg-none my-5 w-100">
+              <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
+              <input class="form-control input-search ps-10" 
+                     type="search"
+                     placeholder="輸入關鍵字">
+              <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
+        </form>
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">最新消息</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">商品介紹</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="position-absolute bg-primary-500 d-lg-none hr-line w-100" style="height: 4px"></div>
+      <a class="nav-link w-100 d-lg-none d-flex align-items-center pt-7 pb-3" href="#">
+          <span class="material-symbols-outlined text-primary-300 align-bottom me-2" style="width: 20px; height: 20px;">login</span>
+          <p class="h6 text-primary-800">註冊/登入</p>
+      </a>
+<!--desktop header-->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-6 align-items-center d-none d-lg-flex">
         <li class="nav-item">
           <a class="nav-link" href="#">最新消息</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">商品介紹</a>
         </li> 
-        <li>
-          <form class="position-relative">
-            <input class="form-control input-search" type="search" placeholder="輸入關鍵字">
-            <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
-          </form>
-        </li>
+        <div class="collapse" id="collapsSearch">
+            <form class="position-relative">
+              <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
+              <input class="form-control input-search ps-10" 
+                     type="search"
+                     placeholder="輸入關鍵字">
+              <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
+            </form>
+        </div>
         <li class="nav-item">
-          <button class="nav-link">
+          <button class="nav-link" 
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsSearch">
             <span class="material-symbols-outlined align-bottom">search</span>
           </button>
         </li>
@@ -42,12 +89,7 @@
           <button class="btn btn-primary">註冊/登入
           </button>
         </li>
-      </ul>
-      
-      下次接續：搜尋欄的icon
-      
+      </ul> 
     </div>
   </div>
 </nav>
-
-
