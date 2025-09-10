@@ -1,0 +1,13 @@
+.cart-border{
+    border: 1px solid $neutral-300;
+    border-radius: 16px;
+}
+
+.ratio-color [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white; /* 預設背景白色 */
+  border: 2px solid #0d6efd; /* Bootstrap primary 顏色邊框 */
+  opacity: 1; /* 不要透明 */
+}
