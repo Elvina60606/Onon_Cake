@@ -9,14 +9,14 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <!--付款方式＋發票區塊-->
-    <div class="container">
+    <!-- 付款方式 & 發票區塊 -->
+    <section class="container">
       <div class="row g-6">
-      <!--付款方式-->
+      <!-- 付款方式 -->
         <div class="col-6">
           <div class="cart-border p-6">
             <h5 class="text-neutral-800 mb-4">付款方式</h5>
-            <div class="form-check">
+            <div class="form-check py-2 ps-7">
                 <input class="form-check-input" 
                        type="radio" 
                        name="paymemtMethod" 
@@ -27,7 +27,7 @@
                     線上刷卡
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check py-2 ps-7">
                 <input class="form-check-input" 
                        type="radio" 
                        name="paymemtMethod" 
@@ -37,7 +37,7 @@
                     LINE PAY
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check py-2 ps-7">
                 <input class="form-check-input" 
                        type="radio" 
                        name="paymemtMethod" 
@@ -47,7 +47,7 @@
                     APPLE PAY
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check py-2 ps-7">
                 <input class="form-check-input" 
                        type="radio" 
                        name="paymemtMethod" 
@@ -57,17 +57,109 @@
                     ATM轉帳
                 </label>
             </div>
-            
-
-
           </div>
-
         </div>
-
-      <!--發票區塊-->
+      <!-- 發票開立 -->
         <div class="col-6">
           <div class="cart-border p-6">
-            <h2>234</h2>
+            <h5 class="text-neutral-800 mb-4">發票開立</h5>
+            <div class="mb-4">
+                <select class="form-select" id="invoiceSelect">
+                    <option value="personalInvoice" selected>個人發票</option>
+                    <option value="companyInvoice">公司發票</option>
+                </select>
+            </div>
+
+      <!-- 個人發票開立方式 -->
+            <div class="invoice-block" id="personalBlock">
+              <!-- 會員載具 -->
+              <div class="form-check py-2 ps-7">
+                <input class="form-check-input" 
+                       type="radio" 
+                       name="invoiveCarrier" 
+                       id="memberCarrier" 
+                       checked
+                >
+                <label class="form-check-label" for="memberCarrier">
+                    會員載具
+                </label>
+              </div>
+              <!-- 條碼輸入 -->
+              <div id="invoiceCollapseGroup">
+                <!-- 手機條碼 -->
+                        <div class="d-flex">
+                          <div class="form-check py-2 ps-7 me-8">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="invoiveCarrier" 
+                                   id="mobileBarcode"
+                                   data-bs-toggle="collapse" data-bs-target="#mobileBarcodeInput" 
+                            >
+                            <label class="form-check-label" for="mobileBarcode">
+                                手機條碼
+                            </label>
+                          </div>
+                          <div class="collapse collapse-horizontal flex-grow-1"
+                               id="mobileBarcodeInput"
+                               data-bs-parent="#invoiceCollapseGroup">
+                            <input class="form-control rounded-3"
+                                   type="text" 
+                                   placeholder="請填寫手機條碼"
+                                   style="height: 40px;"
+                            >
+                          </div>
+                        </div>
+                <!-- 自然人憑證 -->
+                        <div class="d-flex">
+                          <div class="form-check py-2 ps-7 me-8">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="invoiveCarrier" 
+                                   id="citizenDigitalCertificate"
+                                   data-bs-toggle="collapse" data-bs-target="#citizenDigitalCertificateInput" 
+                            >
+                            <label class="form-check-label" for="citizenDigitalCertificate">
+                                自然人憑證
+                            </label>
+                          </div>
+                          <div class="collapse collapse-horizontal flex-grow-1"
+                               id="citizenDigitalCertificateInput"
+                               data-bs-parent="#invoiceCollapseGroup">
+                            <input class="form-control rounded-3"
+                                   type="text" 
+                                   placeholder="請填寫自然人憑證"
+                                   style="height: 40px;"
+                            >
+                          </div>
+                        </div>
+              </div>
+            </div>
+
+      <!--公司發票區塊-->
+            <div class="invoice-block" id="companyBlock" style="display: none;">
+              <div class="mb-4">
+                  <label for="companyName" 
+                         class="form-label">
+                         公司抬頭<span class="fs-7 text-alert-500 align-top ms-1">*</span>
+                  </label>
+                  <input type="text" 
+                         class="form-control" id="companyName" 
+                         placeholder="請填寫公司抬頭"
+                  >
+              </div>
+              <div class="mb-4">
+                  <label for="unifiedNumber" 
+                         class="form-label">
+                         統一編號<span class="fs-7 text-alert-500 align-top ms-1">*</span>
+                  </label>
+                  <input type="text" 
+                         class="form-control" id="unifiedNumber" 
+                         placeholder="請填寫統一編號"
+                  >
+              </div>
+            </div>
+
+
 
           </div>
         </div>
@@ -78,9 +170,25 @@
         <p >確認訂購</p>
       </button>
       
-    </div>
+    </section>
     <%- include('./layout/footer'); -%>
+    <!-- 發票選項轉換 -->
+    <script>
+        const select = document.getElementById('invoiceSelect');
+        const personalBlock = document.getElementById('personalBlock');
+        const companyBlock = document.getElementById('companyBlock');
 
+        select.addEventListener('change', function() {
+          if (this.value === 'personalInvoice') {
+            personalBlock.style.display = 'block';
+            companyBlock.style.display = 'none';
+          } else {
+            personalBlock.style.display = 'none';
+            companyBlock.style.display = 'block';
+          }
+        });
+    </script>
+    
     <script type="module" src="../main.js"></script>
   </body>
 </html>
