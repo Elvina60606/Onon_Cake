@@ -11,9 +11,9 @@
 
     <!-- 付款方式 & 發票區塊 -->
     <section class="container">
-      <div class="row g-6">
+      <div class="row flex-md-colomn g-6">
       <!-- 付款方式 -->
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="cart-border p-6">
             <h5 class="text-neutral-800 mb-4">付款方式</h5>
             <div class="form-check py-2 ps-7">
@@ -60,7 +60,7 @@
           </div>
         </div>
       <!-- 發票開立 -->
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="cart-border p-6">
             <h5 class="text-neutral-800 mb-4">發票開立</h5>
             <div class="mb-4">
@@ -87,7 +87,7 @@
               <!-- 條碼輸入 -->
               <div id="invoiceCollapseGroup">
                 <!-- 手機條碼 -->
-                        <div class="d-flex">
+                        <div class="d-flex flex-column flex-md-row">
                           <div class="form-check py-2 ps-7 me-8">
                             <input class="form-check-input" 
                                    type="radio" 
@@ -99,7 +99,7 @@
                                 手機條碼
                             </label>
                           </div>
-                          <div class="collapse collapse-horizontal flex-grow-1"
+                          <div class="collapse flex-grow-1"
                                id="mobileBarcodeInput"
                                data-bs-parent="#invoiceCollapseGroup">
                             <input class="form-control rounded-3"
@@ -110,7 +110,7 @@
                           </div>
                         </div>
                 <!-- 自然人憑證 -->
-                        <div class="d-flex">
+                        <div class="d-flex flex-column flex-md-row">
                           <div class="form-check py-2 ps-7 me-8">
                             <input class="form-check-input" 
                                    type="radio" 
@@ -122,7 +122,7 @@
                                 自然人憑證
                             </label>
                           </div>
-                          <div class="collapse collapse-horizontal flex-grow-1"
+                          <div class="collapse flex-grow-1"
                                id="citizenDigitalCertificateInput"
                                data-bs-parent="#invoiceCollapseGroup">
                             <input class="form-control rounded-3"
@@ -165,7 +165,7 @@
         </div>
       </div>
       
-      <!--暫設定mt-8，上半段區塊設定完成後刪除-->
+      <!--暫設定mt-8，上段區塊設定完成後刪除-->
       <button class="btn btn-primary w-100 mt-8 mb-12">
         <p >確認訂購</p>
       </button>
