@@ -13,34 +13,85 @@
     <!--容器-->
       <main class="container py-11">
         <div class="row justify-content-center">
-          <div class="col-6">
+          <div class="col-md-8">
     <!--登入區塊上方文字-->
             <div class="mb-8 text-center"> 
-              <p class="h4 mb-2">歡迎登入</p>
-              <p class="h5">OnOn_Cake二溫菓子</p>
+              <p class="h3 fs-md-2 mb-2">歡迎登入</p>
+              <p class="h5 fs-md-4">OnOn_Cake二溫菓子</p>
             </div>
       <!--登入區塊-->
-            <div class="form-floating mb-3">
-                <input type="text" 
-                       class="form-control" 
-                       id="floatingInput" 
-                       placeholder="帳號">
-                <label for="floatingInput">帳號</label>
+            <div class="mb-3">
+              <div class="form-floating position-relative mb-3">
+                  <input type="text" 
+                         class="form-control" 
+                         id="floatingInput" 
+                         placeholder="帳號">
+                  <label for="floatingInput">帳號</label>
+                  <span class="material-symbols-outlined position-absolute  top-50 end-0 translate-middle">
+                    lock
+                  </span>
+              </div>
+              <div class="form-floating position-relative">
+                  <input type="password"      
+                         class="form-control"     
+                         id="floatingPassword" 
+                         placeholder="Password">
+                  <label for="floatingPassword">密碼</label>
+                  <span class="material-symbols-outlined position-absolute  top-50 end-0 translate-middle">
+                    key
+                  </span>
+              </div>
             </div>
-    
-            <div class="form-floating">
-                <input type="password"      
-                       class="form-control"     
-                       id="floatingPassword" 
-                       placeholder="Password">
-                <label for="floatingPassword">密碼</label>
-            </div>
+      <!--忘記密碼modal-->
+            <a  class="d-block text-end text-neutral-600" 
+                data-bs-toggle="modal" 
+                data-bs-target="#staticBackdrop">
+                忘記密碼
+            </a>
+        <!-- Modal -->
+            <div class="modal fade" 
+                 id="staticBackdrop" 
+                 data-bs-backdrop="static" 
+                 data-bs-keyboard="false" 
+                 tabindex="-1" 
+                 aria-labelledby="staticBackdropLabel" 
+                 aria-hidden="true"
+            >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" 
+                            class="btn-close" 
+                            data-bs-dismiss="modal" 
+                            aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center mb-7">
+                    <div class="col-3">
+                      <img src="../assets/images/canele-2.png" alt="canele-2">
+                    </div>
+                    <div class="col-7">
+                      <h4 class="mb-2">忘記密碼</h4>
+                      <p class="fs-5 mb-2">請輸入您註冊會員的信箱</p>
+                      <div class="position-relative">
+                        <input type="email" 
+                               class="form-control" 
+                               id="exampleFormControlInput1" 
+                               placeholder="請輸入信箱"
+                        >
+                        <span class="material-symbols-outlined position-absolute top-50 end-0 translate-middle-y me-1">
+                          mail
+                        </span>
+                      </div>
+                    </div>
+                </div>
 
+              </div>
+            </div>
+            </div>
+        <!--modal end-->
           </div>
-
         </div>
-
-
       </main>
 
     </div>
