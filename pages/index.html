@@ -4,10 +4,93 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁</title>
+    <title>Onon_cake首頁</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
+
+    <!-- 輪播圖 -->
+    <section class="hero-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-carousel pt-8 pb-8">
+              <div class="hero-slide active d-flex justify-content-center">
+                <img
+                  class="hero-image"
+                  src="/assets/images/canele-banner.jpg"
+                  alt="法式可麗露橫幅"
+                  loading="lazy"
+                />
+                <div class="hero-content">
+                  <div class="hero-text mb-8">
+                    <p>在平淡的生活中</p>
+                    <p>用甜點找回你的心跳</p>
+                  </div>
+                  <button class="hero-button">點我訂購</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-indicators d-flex justify-content-center align-items-center"
+            >
+              <button
+                class="indicator active"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="0"
+              ></button>
+              <button class="indicator" data-bs-slide-to="1"></button>
+              <button class="indicator" data-bs-slide-to="2"></button>
+              <button class="indicator" data-bs-slide-to="3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="vector1-img"
+        src="/assets/images/vector1.png"
+        alt="裝飾向量圖案1"
+      />
+    </section>
+
+    <!--品牌故事區塊-->
+    <section class="story-container">
+      <div class="story-content">
+        <h2 class="h1 mb-6 story-title">品牌故事</h2>
+        <p class="mb-4">
+          2020
+          年，從日本結束兩年的甜點研習後回到台灣，心中始終懷抱著一個小小夢想 ——
+          擁有一家屬於自己的甜點店。於是，ONON CAKE 二溫菓子 誕生了。
+        </p>
+        <p class="mb-2">2022｜二溫菓子 品牌創立</p>
+        <p class="mb-2">2023｜中壢中原分店 開幕</p>
+        <p class="mb-4">2024｜桃園藝文分店 開幕</p>
+        <p>在平淡的生活中，用甜點找回你的心跳</p>
+      </div>
+      <img class="cake-img" src="/assets/images/cake.png" alt="杯子蛋糕" />
+      <img class="cake2-img" src="/assets/images/cake2.png" alt="切片蛋糕" />
+      <img class="cake3-img" src="/assets/images/cake3.png" alt="法國麵包" />
+      <img
+        class="vector11-img"
+        src="/assets/images/vector1.png"
+        alt="裝飾向量圖案1"
+      />
+      <img
+        class="vector2-img"
+        src="/assets/images/vector2.png"
+        alt="裝飾向量圖案2"
+      />
+      <img
+        class="vector3-img"
+        src="/assets/images/vector3.png"
+        alt="裝飾向量圖案3"
+      />
+      <img
+        class="rectangle303-img"
+        src="/assets/images/rectangle303.png"
+        alt="背景波浪圖案"
+      />
+    </section>
 
     <!-- 可麗露寄甜計畫 -->
     <section class="sub-section-bg">
@@ -34,9 +117,7 @@
                   src="/assets/images/canele-vector.png"
                   alt="可麗露"
                 />
-                <h2 class="fs-1 text-primary-800 mb-6">
-                  可麗露・寄甜計劃
-                </h2>
+                <h2 class="fs-1 text-primary-800 mb-6">可麗露・寄甜計劃</h2>
                 <h3 class="fs-5 text-primary-700 mb-6">
                   品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
                 </h3>
@@ -47,10 +128,8 @@
         </div>
         <!-- 桌機版 -->
         <div class="d-none d-lg-block">
-          <div
-            class="col-lg-7 pt-lg-12 position-absolute top-0 end-0 z-1"
-          >
-            <img src="/assets/images/vector-4.png" alt="" />
+          <div class="col-lg-7 pt-lg-12 position-absolute top-0 end-0 z-1">
+            <img src="/assets/images/vector-4.png" alt="裝飾向量圖案4" />
             <div class="position-absolute top-50 start-50 translate-middle z-2">
               <div class="py-12 text-center">
                 <img
@@ -58,9 +137,7 @@
                   src="/assets/images/canele-vector.png"
                   alt="可麗露"
                 />
-                <h2 class="fs-3 text-primary-800 mb-6">
-                  可麗露・寄甜計劃
-                </h2>
+                <h2 class="fs-3 text-primary-800 mb-6">可麗露・寄甜計劃</h2>
                 <h3 class="fs-5 text-primary-700 mb-6">
                   品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
                 </h3>
