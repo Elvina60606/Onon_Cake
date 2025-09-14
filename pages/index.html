@@ -1,17 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
- 
+    <title>首頁</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    
-    
 
+    <!-- 可麗露寄甜計畫 -->
+    <section class="sub-section-bg">
+      <img
+        class="d-none d-lg-block"
+        src="/assets/images/rectangle-304.svg"
+        alt=""
+      />
+      <div class="container position-relative">
+        <div class="row my-8 my-lg-0">
+          <!-- 左側 可麗露擺盤圖 -->
+          <div class="col-12 col-lg-7 position-relative z-3">
+            <div class="py-lg-12 mb-8 mb-lg-0">
+              <img src="/assets/images/canele-sub.png" alt="可麗露" />
+            </div>
+          </div>
+          <!-- 右側 不規則背景+文案 -->
+          <!-- 手機版 -->
+          <div class="d-lg-none">
+            <div class="col-12">
+              <div class="text-center shape-bg mb-12">
+                <img
+                  class="mb-6"
+                  src="/assets/images/canele-vector.png"
+                  alt="可麗露"
+                />
+                <h2 class="fs-1 text-primary-800 mb-6">
+                  可麗露・寄甜計劃
+                </h2>
+                <h3 class="fs-5 text-primary-700 mb-6">
+                  品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
+                </h3>
+                <a href="#" class="btn btn-primary">點我了解寄甜計劃</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 桌機版 -->
+        <div class="d-none d-lg-block">
+          <div
+            class="col-lg-7 pt-lg-12 position-absolute top-0 end-0 z-1"
+          >
+            <img src="/assets/images/vector-4.png" alt="" />
+            <div class="position-absolute top-50 start-50 translate-middle z-2">
+              <div class="py-12 text-center">
+                <img
+                  class="mb-6"
+                  src="/assets/images/canele-vector.png"
+                  alt="可麗露"
+                />
+                <h2 class="fs-3 text-primary-800 mb-6">
+                  可麗露・寄甜計劃
+                </h2>
+                <h3 class="fs-5 text-primary-700 mb-6">
+                  品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
+                </h3>
+                <a href="#" class="btn btn-primary">點我了解寄甜計劃</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 加入會員 -->
+    <section class="bg-primary-500">
+      <div class="container">
+        <div class="py-8 py-lg-0">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <div
+                class="my-lg-12 pt-8 px-lg-8 py-lg-12 text-center text-lg-start"
+              >
+                <h2 class="fs-3 fs-lg-1 text-primary-800 mb-6">
+                  加入會員，即享首購不限金額88折
+                </h2>
+                <p class="fs-6 text-primary-700 mb-6">
+                  會員可享多重優惠：專屬折扣、紅利點數、生日優惠，現在加入會員，首購優惠與寄甜計畫合併使用，即贈經典原味可麗露乙份，贈品數量有限贈完為止，敬請把握優惠。本活動不可與其他優惠合併使用。
+                </p>
+                <a href="#" class="btn btn-primary mb-6 mb-lg-0"
+                  >點我手刀加入會員</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="pb-8 pb-lg-12 text-center text-lg-start">
+                <img
+                  class="img-excess"
+                  src="/assets/images/join-us.png"
+                  alt="加入會員插圖"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <%- include('./layout/footer'); -%>
 
