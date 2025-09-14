@@ -409,6 +409,10 @@
     color: #FFFFFF;
     padding: 8px 24px;
     border-radius: 20px;
+    &:hover{
+        background: $secondary-500;
+        color: $primary-500;
+    }
 }
 
 
