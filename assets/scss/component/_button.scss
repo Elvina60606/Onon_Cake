@@ -22,3 +22,9 @@
         color: $primary-500;
     }
 }
+
+.btn-login{
+    &:hover{
+        background-color: $primary-700;
+    }
+}

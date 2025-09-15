@@ -12,14 +12,14 @@
     <div class="bg-light">
     <!--容器-->
       <main class="container py-11">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
+        <div class="row flex-column justify-content-center align-items-center">
+          <div class="col-lg-6 col-md-8 col-sm-10">
     <!--登入區塊上方文字-->
             <div class="mb-8 text-center"> 
-              <p class="h3 fs-md-2 mb-2">歡迎登入</p>
-              <p class="h5 fs-md-4">OnOn_Cake二溫菓子</p>
+              <p class="h3 fs-md-2 mb-2 text-primary-700">歡迎登入</p>
+              <p class="h5 fs-md-4 text-primary-700">OnOn_Cake二溫菓子</p>
             </div>
-      <!--登入區塊-->
+      <!--帳號密碼區塊-->
             <div class="mb-3">
               <div class="form-floating position-relative mb-3">
                   <input type="text" 
@@ -27,7 +27,7 @@
                          id="floatingInput" 
                          placeholder="帳號">
                   <label for="floatingInput">帳號</label>
-                  <span class="material-symbols-outlined position-absolute  top-50 end-0 translate-middle">
+                  <span class="material-symbols-outlined text-primary-700 position-absolute top-50 end-0 translate-middle">
                     lock
                   </span>
               </div>
@@ -37,18 +37,18 @@
                          id="floatingPassword" 
                          placeholder="Password">
                   <label for="floatingPassword">密碼</label>
-                  <span class="material-symbols-outlined position-absolute  top-50 end-0 translate-middle">
+                  <span class="material-symbols-outlined text-primary-700 position-absolute  top-50 end-0 translate-middle">
                     key
                   </span>
               </div>
             </div>
-      <!--忘記密碼modal-->
+      <!--忘記密碼-->
             <a  class="d-block text-end text-neutral-600" 
                 data-bs-toggle="modal" 
                 data-bs-target="#staticBackdrop">
                 忘記密碼
             </a>
-        <!-- Modal -->
+        <!--忘記密碼modal-->
             <div class="modal fade" 
                  id="staticBackdrop" 
                  data-bs-backdrop="static" 
@@ -66,20 +66,20 @@
                             aria-label="Close">
                     </button>
                 </div>
-                <div class="modal-body row justify-content-center mb-7">
+                <div class="modal-body row justify-content-center align-items-center mb-7">
                     <div class="col-3">
                       <img src="../assets/images/canele-2.png" alt="canele-2">
                     </div>
                     <div class="col-7">
-                      <h4 class="mb-2">忘記密碼</h4>
-                      <p class="fs-5 mb-2">請輸入您註冊會員的信箱</p>
+                      <h6 class="fs-lg-5 mb-1">忘記密碼</h6>
+                      <p class="fs-7 fs-lg-6 mb-2">請輸入您註冊會員的信箱</p>
                       <div class="position-relative">
                         <input type="email" 
-                               class="form-control" 
+                               class="form-control form-control-sm" 
                                id="exampleFormControlInput1" 
-                               placeholder="請輸入信箱"
+                               placeholder="信箱"
                         >
-                        <span class="material-symbols-outlined position-absolute top-50 end-0 translate-middle-y me-1">
+                        <span class="material-symbols-outlined position-absolute top-50 end-0 translate-middle-y me-1 text-primary-600">
                           mail
                         </span>
                       </div>
@@ -89,8 +89,19 @@
               </div>
             </div>
             </div>
-        <!--modal end-->
+        <!--忘記密碼modal end-->
           </div>
+      <!--會員登入按鈕-->
+          <div class="col-6 d-flex justify-content-center">
+              <button type="button"
+                      class="btn btn-login btn-primary-300 text-white w-50">
+                    會員登入
+              </button>
+          </div>
+
+
+
+
         </div>
       </main>
 
