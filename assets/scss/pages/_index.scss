@@ -333,6 +333,7 @@
   }
 }
 
+/*可麗露寄甜計畫*/
 .sub-section-bg {
   // 只在桌機以上顯示 //
   @media (min-width: 992px) {
@@ -346,10 +347,10 @@
   background-image: url(/assets/images/vector-4.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  
+  background-position: center;  
 }
 
+/*加入會員*/
 .img-excess {
   // 只在桌機以上凸出 //
   @media (min-width: 992px) {
@@ -372,11 +373,11 @@
     position: relative;
 }
 // 滑過商品圖 圖片會變大
-.card-img-top {
+.dessert-card {
   transition: transform 0.4s ease; /* 平滑動畫 */
 }
 
-.card-img-top:hover {
+.dessert-card:hover {
   transform: scale(1.1);
 }
 // 卡片左上角名次徽章
