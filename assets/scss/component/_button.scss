@@ -22,3 +22,9 @@
         color: $primary-500;
     }
 }
+
+.btn-confirm{
+    &:hover{
+        background-color: $primary-700;
+    }
+}
