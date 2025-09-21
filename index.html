@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
- 
-    <script type="module" crossorigin src="/Onon_Cake/assets/main-DgXY4INZ.js"></script>
-    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-CNvroyh7.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Onon_cake首頁</title>
+    <script type="module" crossorigin src="/Onon_Cake/assets/main-CePxw2l6.js"></script>
+    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-ClBI2c3b.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
+<!--navbar logo-->
     <a class="navbar-brand me-auto py-0" href="index.html">
         <img src="/Onon_Cake/assets/onon_logo-sm-Uk7S4kku.svg" 
              alt="onon_logo-sm"
@@ -20,12 +28,13 @@
              alt="onon_logo"
              class="d-none d-lg-block">
     </a>
-    <button class="nav-link d-lg-none">
+    <a href="shopping-cart.html" class="nav-link d-lg-none">
       <div class="position-relative">
         <span class="material-symbols-outlined fill align-bottom text-primary"> shopping_cart</span>
         <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
       </div>
-    </button>
+    </a>
+<!--漢堡按鈕-->
     <button class="navbar-toggler border-0" type="button"   
             data-bs-toggle="collapse" 
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -34,7 +43,7 @@
       <span class="material-symbols-outlined">menu</span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<!--mobile header-->
+<!--手機版start-->
       <ul class="navbar-nav ms-auto mb-5 align-items-center d-lg-none">
         <form class="position-relative d-lg-none my-5 w-100">
               <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
@@ -43,6 +52,7 @@
                      placeholder="輸入關鍵字">
               <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
         </form>
+ <!--待補：最新消息連結-->
         <li class="nav-item d-lg-none w-100">
           <a class="nav-link py-0" href="#">
             <div class="d-flex justify-content-between align-items-center py-3">
@@ -52,7 +62,7 @@
           </a>
         </li>
         <li class="nav-item d-lg-none w-100">
-          <a class="nav-link py-0" href="#">
+          <a class="nav-link py-0" href="product.html">
             <div class="d-flex justify-content-between align-items-center py-3">
               <p class="h6 text-primary-800 mb-0">商品介紹</p>
               <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
@@ -60,25 +70,30 @@
           </a>
         </li>
       </ul>
-      <div class="position-absolute bg-primary-500 d-lg-none hr-line w-100" style="height: 4px"></div>
-      <a class="nav-link w-100 d-lg-none d-flex align-items-center pt-7 pb-3" href="#">
+    <!--漢堡選單裡的那條分隔線-->
+      <div class="bg-primary-500 d-lg-none hr-line w-100" style="height: 4px"></div>
+    <!--漢堡選的裡的那條分隔線end-->
+      <a class="nav-link w-100 d-lg-none d-flex align-items-center pt-7 pb-3" href="member-login.html">
           <span class="material-symbols-outlined text-primary-300 align-bottom me-2" style="width: 20px; height: 20px;">login</span>
           <p class="h6 text-primary-800">註冊/登入</p>
       </a>
       <div class="empty-section d-lg-none"></div>
-<!--desktop header-->
+<!--手機版end-->
+<!--桌機版start-->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-6 align-items-center d-none d-lg-flex">
+    <!--待補：最新消息連結-->
         <li class="nav-item">
           <a class="nav-link" href="#">最新消息</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">商品介紹</a>
+          <a class="nav-link" href="product.html">商品介紹</a>
         </li> 
         <div class="collapse" id="collapsSearch">
             <form class="position-relative">
               <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
               <input class="form-control input-search ps-10" 
                      type="search"
+                     id="input-search"
                      placeholder="輸入關鍵字">
               <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
             </form>
@@ -91,22 +106,294 @@
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link">
+          <a href="shopping-cart" class="nav-link">
             <div class="position-relative">
               <span class="material-symbols-outlined fill align-bottom"> shopping_cart</span>
               <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
             </div>
-          </button>
+          </a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-primary">註冊/登入
-          </button>
+          <a href="member-login.html">
+            <button class="btn btn-primary">註冊/登入
+            </button>
+          </a>
         </li>
       </ul> 
+<!--桌機版end-->
     </div>
   </div>
 </nav>
 
+    <!-- 輪播圖 -->
+    <section class="hero-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-carousel pt-8 pb-8">
+              <div class="hero-slide active d-flex justify-content-center">
+                <img
+                  class="hero-image"
+                  src="/Onon_Cake/assets/canele-banner-DPfKfCJu.jpg"
+                  alt="法式可麗露橫幅"
+                  loading="lazy"
+                />
+                <div class="hero-content">
+                  <div class="hero-text mb-8">
+                    <p>在平淡的生活中</p>
+                    <p>用甜點找回你的心跳</p>
+                  </div>
+                  <button class="hero-button">點我訂購</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-indicators d-flex justify-content-center align-items-center"
+            >
+              <button
+                class="indicator active"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="0"
+              ></button>
+              <button class="indicator" data-bs-slide-to="1"></button>
+              <button class="indicator" data-bs-slide-to="2"></button>
+              <button class="indicator" data-bs-slide-to="3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="vector1-img"
+        src="/Onon_Cake/assets/vector1-DCtdSXuc.png"
+        alt="裝飾向量圖案1"
+      />
+    </section>
+
+    <!--品牌故事區塊-->
+    <section class="story-container">
+      <div class="story-content">
+        <h2 class="h1 mb-6 story-title">品牌故事</h2>
+        <p class="mb-4">
+          2020
+          年，從日本結束兩年的甜點研習後回到台灣，心中始終懷抱著一個小小夢想 ——
+          擁有一家屬於自己的甜點店。於是，ONON CAKE 二溫菓子 誕生了。
+        </p>
+        <p class="mb-2">2022｜二溫菓子 品牌創立</p>
+        <p class="mb-2">2023｜中壢中原分店 開幕</p>
+        <p class="mb-4">2024｜桃園藝文分店 開幕</p>
+        <p>在平淡的生活中，用甜點找回你的心跳</p>
+      </div>
+      <img class="cake-img" src="/Onon_Cake/assets/cake-DDIrHCEG.png" alt="杯子蛋糕" />
+      <img class="cake2-img" src="/Onon_Cake/assets/cake2-B4mW-ZLs.png" alt="切片蛋糕" />
+      <img class="cake3-img" src="/Onon_Cake/assets/cake3-B7QDg5bi.png" alt="法國麵包" />
+      <img
+        class="vector11-img"
+        src="/Onon_Cake/assets/vector1-DCtdSXuc.png"
+        alt="裝飾向量圖案1"
+      />
+      <img
+        class="vector2-img"
+        src="/Onon_Cake/assets/vector2-YpaA4bay.png"
+        alt="裝飾向量圖案2"
+      />
+      <img
+        class="vector3-img"
+        src="/Onon_Cake/assets/vector3-BaxcLNNr.png"
+        alt="裝飾向量圖案3"
+      />
+      <img
+        class="rectangle303-img"
+        src="data:image/png;base64,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"
+        alt="背景波浪圖案"
+      />
+    </section>
+
+    <!-- 熱銷排行 -->
+    <section class="bg-secondary-50">
+      <div class="index-container">
+        <div class="text-center pb-6 pt-8 py-lg-8">
+          <h1 class="fs-3 fs-lg-1">熱銷排行</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col mb-2 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100">
+              <span class="badge rank-badge fs-6">第一名</span>
+              <img
+                src="/Onon_Cake/assets/canele-CVTibPu7.png"
+                class="card-img-top"
+                alt="經典原味可麗露"
+              />
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">經典原味可麗露</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  外酥內嫩焦糖香，法式經典一口入魂
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 180</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-2 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100">
+              <span class="badge rank-badge fs-6">第二名</span>
+              <img
+                src="/Onon_Cake/assets/madeleine-DB6ac81q.png"
+                class="card-img-top d-none d-lg-block"
+                alt="糖漬檸檬瑪德蓮"
+              />
+              <img
+                src="/Onon_Cake/assets/madeleine-mobile-kaKpOmiZ.png"
+                class="card-img-top d-lg-none"
+                alt="糖漬檸檬瑪德蓮"
+              />
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">糖漬檸檬瑪德蓮</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  清香檸檬糖漬點綴，鬆軟口感酸甜平衡剛剛好
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 150</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-6 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100">
+              <span class="badge rank-badge fs-6">第三名</span>
+              <img
+                src="/Onon_Cake/assets/basque-CUz9Q4E5.png"
+                class="card-img-top"
+                alt="超濃厚巴斯克"
+              />
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">超濃厚巴斯克</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  香氣濃烈滑順綿密，入口即化的極致濃厚感
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 240</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center pb-8">
+          <button type="button" class="btn btn-light fs-6">更多商品</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 可麗露寄甜計畫 -->
+    <section class="sub-section-bg">
+      <img
+        class="d-none d-lg-block"
+        src="data:image/svg+xml,%3csvg%20width='1920'%20height='80'%20viewBox='0%200%201920%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%200H1920V50.7071C1920%2050.7071%201776.2%2030.6891%201682.5%2032.165C1583.19%2033.7292%201531.98%2072.3511%201433%2078.7095C1247.3%2090.639%201145.87%2015.943%20959.5%2015.5149C762.283%2015.0618%20654.699%2085.5408%20458.5%2070.3845C368.209%2063.4095%20321.681%2039.5668%20231%2036.7059C140.184%2033.8407%200%2050.7071%200%2050.7071V0Z'%20fill='%23FFF7F0'/%3e%3c/svg%3e"
+        alt=""
+      />
+      <div class="container position-relative">
+        <div class="row my-8 my-lg-0">
+          <!-- 左側 可麗露擺盤圖 -->
+          <div class="col-12 col-lg-7 position-relative z-3">
+            <div class="py-lg-12 mb-8 mb-lg-0">
+              <img src="/Onon_Cake/assets/canele-sub-DV2kLoRR.png" alt="可麗露" />
+            </div>
+          </div>
+          <!-- 右側 不規則背景+文案 -->
+          <!-- 手機版 -->
+          <div class="d-lg-none">
+            <div class="col-12">
+              <div class="text-center shape-bg mb-12">
+                <img
+                  class="mb-6"
+                  src="/Onon_Cake/assets/canele-vector-I2dkJl_m.png"
+                  alt="可麗露"
+                />
+                <h2 class="fs-1 text-primary-800 mb-6">可麗露・寄甜計劃</h2>
+                <h3 class="fs-5 text-primary-700 mb-6">
+                  品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
+                </h3>
+                <a href="#" class="btn btn-primary">點我了解寄甜計劃</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 桌機版 -->
+        <div class="d-none d-lg-block">
+          <div class="col-lg-7 pt-lg-12 position-absolute top-0 end-0 z-1">
+            <img src="/Onon_Cake/assets/vector-4-CnlUz5W5.png" alt="裝飾向量圖案4" />
+            <div class="position-absolute top-50 start-50 translate-middle z-2">
+              <div class="py-12 text-center">
+                <img
+                  class="mb-6"
+                  src="/Onon_Cake/assets/canele-vector-I2dkJl_m.png"
+                  alt="可麗露"
+                />
+                <h2 class="fs-3 text-primary-800 mb-6">可麗露・寄甜計劃</h2>
+                <h3 class="fs-5 text-primary-700 mb-6">
+                  品嚐一顆可麗露，體現職人精神<br />將這份職人甜點，寄給未來的你
+                </h3>
+                <a href="#" class="btn btn-primary">點我了解寄甜計劃</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 加入會員 -->
+    <section class="bg-primary-500">
+      <div class="container">
+        <div class="py-8 py-lg-0">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <div
+                class="my-lg-12 pt-8 px-lg-8 py-lg-12 text-center text-lg-start"
+              >
+                <h2 class="fs-3 fs-lg-1 text-primary-800 mb-6">
+                  加入會員，即享首購不限金額88折
+                </h2>
+                <p class="fs-6 text-primary-700 mb-6">
+                  會員可享多重優惠：專屬折扣、紅利點數、生日優惠，現在加入會員，首購優惠與寄甜計畫合併使用，即贈經典原味可麗露乙份，贈品數量有限贈完為止，敬請把握優惠。本活動不可與其他優惠合併使用。
+                </p>
+                <a href="#" class="btn btn-primary mb-6 mb-lg-0"
+                  >點我手刀加入會員</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="pb-8 pb-lg-12 text-center text-lg-start">
+                <img
+                  class="img-excess"
+                  src="/Onon_Cake/assets/join-us-DqGaRBfJ.png"
+                  alt="加入會員插圖"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="bg-primary-800">
     <div class="container py-8 d-flex flex-column flex-lg-row align-items-center justify-content-between">
