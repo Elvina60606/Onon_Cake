@@ -1,302 +1,282 @@
-/* 桌機版 */
-.hero-container {
-  max-width: 1920px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-
-  .hero-carousel {
-    margin: 0 auto;
-    max-width: 100%;
-    overflow: hidden;
-    z-index: 2;
-  }
-
-  .hero-slide {
-    flex: 0 0 100%;
-
-    .hero-image {
+    /* 桌機版樣式 */
+    .hero-container {
+      max-width: 1920px;
+      margin: 0 auto;
       position: relative;
-      max-width: 1296px;
-      max-height: 430px;
-      border-radius: 16px;
-      object-fit: cover;
-      z-index: 2;
+      overflow: hidden;
+      padding-top: 64px;
+      padding-bottom: 64px;
     }
-  }
-
-  .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 3;
-
-    .hero-text p {
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 52px;
-      font-weight: 900;
-      line-height: 76.8px;
-      color: #ffffff;
-    }
-  }
-
-  .hero-button {
-    display: inline-block;
-    padding: 8px 20px;
-    border: 1px solid #ffffff;
-    background-color: transparentize(#3f3e3e, 0.8);
-    color: #ffffff;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: #fc8d5d;
-    }
-  }
-
-  .carousel-indicators {
-    gap: 8px;
-
-    .indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #e4e2d1;
-      border: 1px solid #e4e2d1;
-      cursor: pointer;
-      padding: 0;
-      opacity: 0.5;
-      transition: all 0.3s ease;
-
-      &.active {
-        width: 24px;
-        border-radius: 4rem;
-        background-color: #fc8d5d;
-        border: 1px solid #fc8d5d;
-        opacity: 1;
-      }
-
-      &:hover {
-        background-color: #fc8d5d;
-        border: 1px solid #fc8d5d;
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.vector1-img {
-  position: absolute;
-  width: 401.07px;
-  top: 341px;
-  right: calc(50% - 648px);
-  z-index: 1;
-}
-
-.story-container {
-  max-width: 1920px;
-  min-height: 584px;
-  margin: 0 auto;
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
-
-  .story-content {
-    max-width: 636px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-
-    h2 {
-      font-family: "Noto Sans TC", sans-serif;
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 48px;
-      color: #3f3e3e;
-    }
-
-    p {
-      font-family: "Noto Sans TC", sans-serif;
-      font-weight: 400;
-      line-height: 24px;
-      color: #3f3e3e;
-      z-index: 2;
-    }
-  }
-
-  .cake-img {
-    position: absolute;
-    width: 119.41px;
-    top: 0;
-    left: calc(50% - 364px);
-  }
-
-  .cake2-img {
-    position: absolute;
-    width: 138px;
-    top: 199px;
-    right: calc(50% - 648px);
-  }
-
-  .cake3-img {
-    position: absolute;
-    width: 160px;
-    top: 410.17px;
-    left: calc(50% - 508px);
-    z-index: 6;
-  }
-
-    .vector11-img {
-    position: absolute;
-    width: 401.07px;
-    height: 341px;
-    bottom: 463.5px;
-    right: calc(50% - 648px);
-    z-index: 5;
-  }
-
-  .vector2-img {
-    position: absolute;
-    width: 450px;
-    height: 344px;
-    top: 40px;
-    left: calc(50% - 217px);
-    z-index: 4;
-  }
-
-  .vector3-img {
-    position: absolute;
-    width: 459px;
-    top: 418px;
-    left: calc(50% - 648px);
-    z-index: 3;
-  }
-
-  .rectangle303-img {
-    position: absolute;
-    max-width: 1920px;
-    top: 504px;
-    z-index: 2;
-  }
-}
-
-/* 手機版 */
-@media (max-width: 375px) {
-  .hero-container {
-    max-width: 375px;
-    margin: 0 auto;
-    margin-top: -20px;
-    padding-left: 12px;
-    padding-right: 12px;
-    position: relative;
 
     .hero-carousel {
       margin: 0 auto;
       max-width: 100%;
+      overflow: hidden;
+      z-index: 2;
     }
 
-    .hero-slide {
-      flex: 0 0 100%;
-
-      .hero-image {
-        width: 100%;
-        height: 327px;
-        border-radius: 16px;
-        object-fit: cover;
-        overflow: hidden;
-        content: url('/assets/images/canele-banner-md.jpg');
-      }
+    .carousel-inner {
+      border-radius: 16px;
+      overflow: hidden;
     }
 
-    .hero-content {
+    .carousel-item img {
+      max-width: 1296px;
+      max-height: 430px;
+      border-radius: 16px;
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    .hero-content,
+    .mid-content,
+    .discounts-content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      z-index: 3;
+    }
 
-      .hero-text p {
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 33.6px;
-        color: #ffffff;
-        white-space: nowrap;
-      }
+    .discounts-box {
+      margin: 0 auto;
+      max-width: 388px;
+      border-radius: 16px;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 24px 0;
     }
 
     .hero-button {
       display: inline-block;
       padding: 8px 20px;
       border: 1px solid #ffffff;
-      background-color: transparentize(#3f3e3e, 0.8);
+      background-color: rgba(63, 62, 62, 0.2);
       color: #ffffff;
       border-radius: 20px;
       text-decoration: none;
       transition: all 0.3s ease;
-
-      &:hover {
-        background-color: #fc8d5d;
-      }
+      cursor: pointer;
     }
 
+    .hero-button:hover {
+      background-color: #fc8d5d;
+      color: #ffffff;
+    }
+
+    /* 自定義輪播指示器 */
     .carousel-indicators {
-      gap: 6px;
+      position: relative;
       margin-top: 16px;
-
-      .indicator {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: #e4e2d1;
-        border: 1px solid #e4e2d1;
-        cursor: pointer;
-        padding: 0;
-        opacity: 0.5;
-        transition: all 0.3s ease;
-
-        &.active {
-          width: 20px;
-          border-radius: 4rem;
-          background-color: #fc8d5d;
-          border: 1px solid #fc8d5d;
-          opacity: 1;
-        }
-
-        &:hover {
-          background-color: #fc8d5d;
-          border: 1px solid #fc8d5d;
-          opacity: 1;
-        }
-      }
+      margin-bottom: 0;
+      justify-content: center;
+      gap: 8px;
     }
-  }
 
-  .vector1-img {
-    display: none;
-  }
+    .carousel-indicators [data-bs-target] {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #e4e2d1;
+      border: 1px solid #e4e2d1;
+      opacity: 0.5;
+      margin: 0;
+      text-indent: 0;
+      transition: all 0.3s ease;
+    }
 
-  .story-container {
-    max-width: 375px;
-    min-height: auto;
-    margin: 0 auto;
-    padding: 40px 12px;
-    display: flex;
-    position: relative;
-    overflow: hidden;
+    .carousel-indicators .active {
+      width: 24px;
+      border-radius: 4rem;
+      background-color: #fc8d5d;
+      border: 1px solid #fc8d5d;
+      opacity: 1;
+    }
+
+    .carousel-indicators [data-bs-target]:hover {
+      background-color: #fc8d5d;
+      border: 1px solid #fc8d5d;
+      opacity: 1;
+    }
+
+    .vector1-img {
+      position: absolute;
+      width: 401.07px;
+      top: 341px;
+      right: calc(50% - 648px);
+      z-index: 1;
+    }
+
+    /* 品牌故事區塊 */
+    .story-container {
+      max-width: 1920px;
+      min-height: 584px;
+      margin: 0 auto;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
 
     .story-content {
-      max-width: 100%;
+      max-width: 636px;
       margin: 0 auto;
       text-align: center;
       position: relative;
-      padding: 20px 0;
+      z-index: 10;
+    }
 
-      h2 {
+    .story-content p {
+      z-index: 2;
+    }
+
+    .cake-img {
+      position: absolute;
+      width: 119.41px;
+      top: 0;
+      left: calc(50% - 364px);
+    }
+
+    .cake2-img {
+      position: absolute;
+      width: 138px;
+      top: 199px;
+      right: calc(50% - 648px);
+    }
+
+    .cake3-img {
+      position: absolute;
+      width: 160px;
+      top: 410.17px;
+      left: calc(50% - 508px);
+      z-index: 6;
+    }
+
+    .vector11-img {
+      position: absolute;
+      width: 401.07px;
+      height: 341px;
+      bottom: 561.5px;
+      right: calc(50% - 648px);
+      z-index: 5;
+    }
+
+    .vector2-img {
+      position: absolute;
+      width: 450px;
+      height: 344px;
+      top: 40px;
+      left: calc(50% - 217px);
+      z-index: 4;
+    }
+
+    .vector3-img {
+      position: absolute;
+      width: 459px;
+      top: 418px;
+      left: calc(50% - 648px);
+      z-index: 3;
+    }
+
+    .rectangle303-img {
+      position: absolute;
+      max-width: 1920px;
+      top: 504px;
+      z-index: 2;
+    }
+
+    /* 手機版樣式 */
+    @media (max-width: 991px) {
+      .fs-lg-8 { font-size: 24px; }
+      .fs-lg-5 { font-size: 20px; }
+      .fs-lg-3 { font-size: 16px; }
+      .fs-lg-1 { font-size: 28px; }
+      .lh-768 { line-height: 33.6px; }
+      .lh-336 { line-height: 33.6px; }
+
+      .hero-container {
+        max-width: 375px;
+        margin: 0 auto;
+        margin-top: -40px;
+        padding-left: 12px;
+        padding-right: 12px;
+        position: relative;
+      }
+
+      .hero-carousel {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        max-height: 351px;
+        border-radius: 16px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      /* 手機版圖片替換 */
+      .carousel-item:nth-child(1) img {
+        content: url('/assets/images/canele-banner-md.jpg');
+      }
+
+      .carousel-item:nth-child(2) img {
+        content: url('/assets/images/midautumnfestival-banner-md.jpg');
+      }
+
+      .carousel-item:nth-child(3) img {
+        content: url('/assets/images/discounts-banner-md.jpg');
+      }
+
+      .hero-content .hero-text h2,
+      .mid-content .mid-text h2,
+      .mid-content .mid-text p,
+      .discounts-content .discounts-text h2,
+      .discounts-content .discounts-text p {
+        line-height: 33.6px;
+        font-weight: 700;
+      }
+
+      .carousel-indicators {
+        gap: 6px;
+        margin-top: 16px;
+      }
+
+      .carousel-indicators [data-bs-target] {
+        width: 6px;
+        height: 6px;
+      }
+
+      .carousel-indicators .active {
+        width: 20px;
+      }
+
+      .vector1-img {
+        display: none;
+      }
+
+      .story-container {
+        max-width: 375px;
+        min-height: auto;
+        margin: 0 auto;
+        padding: 0px 12px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .story-content {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .story-content h3 {
         font-family: "Noto Sans TC", sans-serif;
         font-size: 28px;
         font-weight: 700;
@@ -305,33 +285,31 @@
         margin-bottom: 24px;
       }
 
-      p {
+      .story-content p {
         font-family: "Noto Sans TC", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         color: #3F3E3E;
       }
-    }
 
-    .vector2-img {
-      position: absolute;
-      width: 351px;
-      height: 268px;
-      left: 12px;
-      top: 87.54px;
-    }
+      .vector2-img {
+        position: absolute;
+        width: 351px;
+        height: 268px;
+        left: 12px;
+        top: 47.54px;
+      }
 
-    .cake-img,
-    .cake2-img,
-    .cake3-img,
-    .vector11-img,
-    .vector3-img,
-    .rectangle303-img {
-      display: none;
+      .cake-img,
+      .cake2-img,
+      .cake3-img,
+      .vector11-img,
+      .vector3-img,
+      .rectangle303-img {
+        display: none;
+      }
     }
-  }
-}
 
 /*可麗露寄甜計畫*/
 .sub-section-bg {
@@ -379,6 +357,7 @@
 
 .dessert-card:hover {
   transform: scale(1.1);
+  
 }
 // 卡片左上角名次徽章
 .rank-badge{

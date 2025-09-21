@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <section class="bg-success-300" style="height: 250px">首購優惠區塊</section>
+    
+    <main class="bg-light">
+<!--隱私權政策-->
+      <div class="bg-neutral-400 py-1">
+        <p class="fs-5 text-center">會員加入須知</p>
+      </div>
+      <div class="d-flex justify-content-center py-6">
+            <div class="form-check mb-0">
+                <input class="form-check-input" 
+                       type="checkbox" 
+                       value="" 
+                       id="policyCheck">
+                <label class="form-check-label" 
+                       for="policyCheck">你已詳閱我們的
+                        <a class="text-success-900" 
+                           href="#">
+                          隱私權政策／服務條款
+                        </a>
+                      ，同意本網站所提拱的服務。
+                </label>
+            </div>
+      </div>
+
+<!--會員資料填寫-->
+      <div class="bg-neutral-400 py-1">
+      <p class="fs-5 text-center">會員資料填寫</p>
+      </div>    
+      <div class="container">
+        <div class="row justify-content-center">
+  <!--左側：姓名＆電話-->
+          <div class="col-lg-4 pt-6">
+        <!--姓名-->
+            <div class="mb-3">
+                <label for="memberName" 
+                       class="form-label">
+                       <span class="fs-5 ps-2">姓名</span>
+                       <div class="form-check form-check-inline mb-0 ms-8">
+                          <input class="form-check-input" 
+                                 type="radio" 
+                                 name="gender" 
+                                 id="mr." 
+                                 value="option1">
+                          <label class="form-check-label" 
+                                 for="mr.">先生</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0">
+                          <input class="form-check-input" 
+                                 type="radio" 
+                                 name="gender" 
+                                 id="mrs." 
+                                 value="option2">
+                          <label class="form-check-label" 
+                                 for="mrs.">小姐</label>
+                      </div>
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       id="memberName" 
+                       placeholder="">
+            </div>
+        <!--電話-->
+            <div class="mb-3">
+                <label for="memberPhone" 
+                       class="form-label">
+                       <span class="fs-5 ps-2">電話</span>
+                </label>
+                <input type="number" 
+                       class="form-control" 
+                       id="memberPhone" 
+                       placeholder="">
+            </div>
+          </div>
+  <!--右側：生日＆電子信箱-->
+          <div class="col-lg-4 pt-0 pt-lg-6">
+          <!--生日-->
+            <div class="mb-3">
+              <label for="memberBirthday" 
+                     class="form-label">
+                    <span class="fs-5 ps-2">生日</span>
+              </label>
+              <input type="date" 
+                     class="form-control" 
+                     id="memberBirthday" 
+              >
+            </div>
+          <!--信箱-->
+            <div class="mb-3">
+              <label for="memberEmail" 
+                     class="form-label">
+                     <span class="fs-5 ps-2">電子信箱</span>
+              </label>
+              <input type="email" 
+                     class="form-control" 
+                     id="memberEmail" 
+                     placeholder="name@example.com">
+            </div>
+          </div>
+        </div>
+<!--地址-->
+        <form class="row gy-2 gx-3 justify-content-center align-items-center pb-6">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-auto">
+                <label class="form-label fs-5 ps-2" for="postCode">地址</label>
+                <input type="text" class="form-control" id="postCode" placeholder="郵遞區號">
+              </div>
+              <div class="col-auto pt-38">
+                <label class="visually-hidden" for="city">縣市</label>
+                <select class="form-select" id="city">
+                  <option selected>縣市</option>
+                  <option value="keelungCounty">基隆市</option>
+                  <option value="taipeiCity">台北市</option>
+                  <option value="newTaipeiCity">新北市</option>
+                  <option value="taoyuanCity">桃園市</option>
+                  <option value="hsinchuCity">新竹市</option>
+                  <option value="hsinchuCounty">新竹縣</option>
+                  <option value="miaoliCounty">苗栗縣</option>
+                  <option value="taichungCity">台中市</option>
+                  <option value="changhuaCounty">彰化縣</option>
+                  <option value="nantouCounty">南投縣</option>
+                  <option value="yunlinCounty">雲林縣</option>
+                  <option value="chiayiCounty">嘉義縣</option>
+                  <option value="tainanCity">台南市</option>
+                  <option value="kaohsiungCity">高雄市</option>
+                  <option value="pingtungCounty">屏東縣</option>
+                  <option value="yilanCounty">宜蘭縣</option>
+                  <option value="hualienCounty">花蓮縣</option>
+                  <option value="taitungCounty">台東縣</option>
+                  <option value="outlyingIslandDistrict">外島地區</option>
+                </select>
+              </div>
+              <div class="col-auto pt-38">
+                <label class="visually-hidden" for="district">鄉鎮市區</label>
+                <select class="form-select" id="district">
+                  <option selected>鄉鎮市區</option>
+                  <option value="daan">大安區</option>
+                  <option value="zhongshan">中山區</option>
+                  <option value="xinyi">信義區</option>
+                  <option value="wanhua">萬華區</option>
+                  <option value="beitou">北投區</option>
+                  <option value="shilin">士林區</option>
+                  <option value="songshan">松山區</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 mb-3">
+            <label for="address" 
+                   class="visually-hidden">
+            </label>
+            <input type="text" 
+                   class="form-control" 
+                   id="address" 
+                   placeholder="請輸入地址"
+            >
+          </div>
+      </div>
+<!--確認送出btn-->
+      <a class="d-block btn btn-confirm btn-primary-300 text-white w-25 mb-8 mx-auto" 
+         data-bs-toggle="modal" 
+         data-bs-target="#signInConfirm">
+          確認送出
+      </a>
+  <!--註冊成功modal-->
+       <div class="modal fade" 
+                 id="signInConfirm" 
+                 data-bs-backdrop="static" 
+                 data-bs-keyboard="false" 
+                 tabindex="-1" 
+                 aria-labelledby="signInConfirmLabel" 
+                 aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" 
+                            class="btn-close" 
+                            data-bs-dismiss="modal" 
+                            aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center align-items-center mb-7">
+                    <div class="col-3">
+                      <img src="../assets/images/canele-2.png" alt="canele-2">
+                    </div>
+                    <div class="col-7">
+                      <h6 class="fs-lg-5 mb-1">恭喜您註冊成功！</h6>
+                      <p class="fs-7 fs-lg-6 mb-2">首購折扣優惠卷已匯入您的帳戶</p>
+                      <a class="d-block btn btn-confirm btn-primary-300 text-white w-75 mb-2 me-auto" href="member-login.html">立即登入</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+
+
+    </main>
+    
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

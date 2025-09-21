@@ -323,6 +323,7 @@ $neutral-300: #E0E0E0;
 $neutral-200: #EEEEEE;
 $neutral-100: #F5F5F5;
 $neutral-50: #FAFAFA;
+$neutral-0: #FFFFFF;//---onon_cake---//
 $neutral: $neutral-900;
 
 $alert-900: #B71C1C;
@@ -380,6 +381,7 @@ $theme-colors: (
   "neutral-200": $neutral-200,
   "neutral-100": $neutral-100,
   "neutral-50":  $neutral-50,
+  "neutral-0":  $neutral-0,//---onon_cake---//
   "neutral": $neutral,
 
   "alert-900": $alert-900,
@@ -512,6 +514,7 @@ $spacers: (
   9: $spacer * 3,   //48
   10:$spacer * 3.25,//52
   11:$spacer * 3.75, //60
+  111:$spacer * 4, //64
   12:$spacer * 5,    //80
   13:$spacer * 7.5,  //120
 );
@@ -733,6 +736,7 @@ $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
+$font-weight-black:           900 !default; //---onon_cake---//
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -747,6 +751,7 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 $h7-font-size:  14px; //--onon_cake-多加入的h7-//
+$h8-font-size:  52px; //--onon_cake-多加入的h8-//
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -758,6 +763,7 @@ $font-sizes: (
   5: $h5-font-size,
   6: $h6-font-size,
   7: $h7-font-size, //--onon_cake-多加入的fs-7//
+  8: $h8-font-size, //--onon_cake-多加入的fs-8//
 ) !default;
 // scss-docs-end font-sizes
 
