@@ -9,184 +9,329 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <!-- 付款方式 & 發票區塊 -->
-    <section class="container">
-      <div class="row flex-md-colomn g-6">
-      <!-- 付款方式 -->
-        <div class="col-md-6">
-          <div class="cart-border p-6">
-            <h5 class="text-neutral-800 mb-4">付款方式</h5>
-            <div class="form-check py-2 ps-7">
-                <input class="form-check-input" 
-                       type="radio" 
-                       name="paymemtMethod" 
-                       id="creditCard" 
-                       checked
-                >
-                <label class="form-check-label" for="creditCard">
-                    線上刷卡
-                </label>
+    <!-- 使用紅利點數與結帳總金額區塊 -->
+    <section class="bg-neutral-50">
+      <div class="container my-4">
+        <div class="row g-3">
+          <!-- 紅利點數 -->
+          <div class="col-12 col-md-4 mt-4">
+            <div
+              class="p-5 p-md-6 border rounded-4"
+              style="background-color: #ffffff"
+            >
+              <label class="form-label d-block mb-1"
+                >可用點數：10點，本次使用</label
+              >
+              <div class="row g-2">
+                <!-- 輸入框：手機滿版、桌機佔剩餘空間 -->
+                <div class="col-12 col-md pe-3 mb-4 mb-md-0">
+                  <input
+                    type="number"
+                    class="form-control coupons"
+                    placeholder="請輸入紅利點數"
+                  />
+                </div>
+                <!-- 使用：手機 50%，桌機自動寬度 -->
+                <div class="col-6 col-md-auto">
+                  <button class="btn use-btn w-100">使用</button>
+                </div>
+                <!-- 清除：手機 50%，桌機自動寬度 -->
+                <div class="col-6 col-md-auto">
+                  <button class="btn btn-primary w-100">清除</button>
+                </div>
+              </div>
             </div>
-            <div class="form-check py-2 ps-7">
-                <input class="form-check-input" 
-                       type="radio" 
-                       name="paymemtMethod" 
-                       id="linePay" 
-                >
-                <label class="form-check-label" for="linePay">
-                    LINE PAY
-                </label>
+          </div>
+
+          <!-- 優惠碼 -->
+          <div class="col-12 col-md-4 mt-4">
+            <div
+              class="p-5 p-md-6 border rounded-4"
+              style="background-color: #ffffff"
+            >
+              <label class="form-label d-block mb-1">優惠碼</label>
+              <div class="row g-2">
+                <div class="col-12 col-md pe-3 mb-4 mb-md-0">
+                  <input
+                    type="text"
+                    class="form-control coupons"
+                    placeholder="請輸入優惠碼"
+                  />
+                </div>
+                <div class="col-6 col-md-auto">
+                  <button class="btn use-btn w-100">使用</button>
+                </div>
+                <div class="col-6 col-md-auto">
+                  <button class="btn btn-primary w-100">清除</button>
+                </div>
+              </div>
             </div>
-            <div class="form-check py-2 ps-7">
-                <input class="form-check-input" 
-                       type="radio" 
-                       name="paymemtMethod" 
-                       id="applePay" 
-                >
-                <label class="form-check-label" for="applePay">
-                    APPLE PAY
-                </label>
-            </div>
-            <div class="form-check py-2 ps-7">
-                <input class="form-check-input" 
-                       type="radio" 
-                       name="paymemtMethod" 
-                       id="atmTransfer" 
-                >
-                <label class="form-check-label" for="atmTransfer">
-                    ATM轉帳
-                </label>
+          </div>
+
+          <!-- 優惠券 -->
+          <div class="col-12 col-md-4 mt-4">
+            <div
+              class="p-5 p-md-6 border rounded-4"
+              style="background-color: #ffffff"
+            >
+              <label class="form-label d-block mb-1">優惠券</label>
+              <div class="row g-2">
+                <div class="col-12 col-md pe-3 mb-4 mb-md-0">
+                  <select class="form-select coupons">
+                    <option selected>請選擇優惠券</option>
+                    <option value="1">優惠券 A</option>
+                    <option value="2">優惠券 B</option>
+                  </select>
+                </div>
+                <div class="col-6 col-md-auto">
+                  <button class="btn use-btn w-100">使用</button>
+                </div>
+                <div class="col-6 col-md-auto">
+                  <button class="btn btn-primary w-100">清除</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      <!-- 發票開立 -->
-        <div class="col-md-6">
-          <div class="cart-border p-6">
-            <h5 class="text-neutral-800 mb-4">發票開立</h5>
-            <div class="mb-4">
-                <select class="form-select" id="invoiceSelect">
-                    <option value="personalInvoice" selected>個人發票</option>
-                    <option value="companyInvoice">公司發票</option>
-                </select>
-            </div>
 
-      <!-- 個人發票開立方式 -->
-            <div class="invoice-block" id="personalBlock">
-              <!-- 會員載具 -->
-              <div class="form-check py-2 ps-7">
-                <input class="form-check-input" 
-                       type="radio" 
-                       name="invoiveCarrier" 
-                       id="memberCarrier" 
-                       checked
-                >
-                <label class="form-check-label" for="memberCarrier">
-                    會員載具
-                </label>
+        <!-- 訂單金額區塊 -->
+        <div class="row mt-4 pb-8">
+          <div class="col-12">
+            <div
+              class="p-5 p-md-6 border rounded-4"
+              style="background-color: #ffffff"
+            >
+              <div
+                class="d-flex justify-content-between pb-2 fs-7 fs-md-6 fs-7 fs-md-6"
+              >
+                <span>小計</span>
+                <span>$ 10,000</span>
               </div>
-              <!-- 條碼輸入 -->
-              <div id="invoiceCollapseGroup">
-                <!-- 手機條碼 -->
-                        <div class="d-flex flex-column flex-md-row">
-                          <div class="form-check py-2 ps-7 me-8">
-                            <input class="form-check-input" 
-                                   type="radio" 
-                                   name="invoiveCarrier" 
-                                   id="mobileBarcode"
-                                   data-bs-toggle="collapse" data-bs-target="#mobileBarcodeInput" 
-                            >
-                            <label class="form-check-label" for="mobileBarcode">
-                                手機條碼
-                            </label>
-                          </div>
-                          <div class="collapse flex-grow-1"
-                               id="mobileBarcodeInput"
-                               data-bs-parent="#invoiceCollapseGroup">
-                            <input class="form-control rounded-3"
-                                   type="text" 
-                                   placeholder="請填寫手機條碼"
-                                   style="height: 40px;"
-                            >
-                          </div>
-                        </div>
-                <!-- 自然人憑證 -->
-                        <div class="d-flex flex-column flex-md-row">
-                          <div class="form-check py-2 ps-7 me-8">
-                            <input class="form-check-input" 
-                                   type="radio" 
-                                   name="invoiveCarrier" 
-                                   id="citizenDigitalCertificate"
-                                   data-bs-toggle="collapse" data-bs-target="#citizenDigitalCertificateInput" 
-                            >
-                            <label class="form-check-label" for="citizenDigitalCertificate">
-                                自然人憑證
-                            </label>
-                          </div>
-                          <div class="collapse flex-grow-1"
-                               id="citizenDigitalCertificateInput"
-                               data-bs-parent="#invoiceCollapseGroup">
-                            <input class="form-control rounded-3"
-                                   type="text" 
-                                   placeholder="請填寫自然人憑證"
-                                   style="height: 40px;"
-                            >
-                          </div>
-                        </div>
+              <div class="d-flex justify-content-between pb-2 fs-7 fs-md-6">
+                <span>運費</span>
+                <span>$ 0</span>
               </div>
-            </div>
-
-      <!--公司發票區塊-->
-            <div class="invoice-block" id="companyBlock" style="display: none;">
-              <div class="mb-4">
-                  <label for="companyName" 
-                         class="form-label">
-                         公司抬頭<span class="fs-7 text-alert-500 align-top ms-1">*</span>
-                  </label>
-                  <input type="text" 
-                         class="form-control" id="companyName" 
-                         placeholder="請填寫公司抬頭"
-                  >
+              <div class="d-flex justify-content-between pb-2 fs-7 fs-md-6">
+                <span>點數</span>
+                <span>- $ 50</span>
               </div>
-              <div class="mb-4">
-                  <label for="unifiedNumber" 
-                         class="form-label">
-                         統一編號<span class="fs-7 text-alert-500 align-top ms-1">*</span>
-                  </label>
-                  <input type="text" 
-                         class="form-control" id="unifiedNumber" 
-                         placeholder="請填寫統一編號"
-                  >
+              <div class="d-flex justify-content-between pb-2 fs-7 fs-md-6">
+                <span>優惠碼</span>
+                <span>- $ 50</span>
+              </div>
+              <div class="d-flex justify-content-between fs-7 fs-md-6">
+                <span>優惠券</span>
+                <span>- $ 50</span>
+              </div>
+              <hr class="my-2" />
+              <div class="d-flex justify-content-between">
+                <span class="h5" style="font-weight: 500">總金額</span>
+                <span class="text-secondary h4">NT$ 9,850</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+    </section>
+
+    <!-- 付款方式 & 發票區塊 -->
+    <section class="container">
+      <div class="row flex-md-colomn g-6">
+        <!-- 付款方式 -->
+        <div class="col-md-6">
+          <div class="cart-border p-6">
+            <h5 class="text-neutral-800 mb-4">付款方式</h5>
+            <div class="form-check py-2 ps-7">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymemtMethod"
+                id="creditCard"
+                checked
+              />
+              <label class="form-check-label" for="creditCard">
+                線上刷卡
+              </label>
+            </div>
+            <div class="form-check py-2 ps-7">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymemtMethod"
+                id="linePay"
+              />
+              <label class="form-check-label" for="linePay"> LINE PAY </label>
+            </div>
+            <div class="form-check py-2 ps-7">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymemtMethod"
+                id="applePay"
+              />
+              <label class="form-check-label" for="applePay"> APPLE PAY </label>
+            </div>
+            <div class="form-check py-2 ps-7">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymemtMethod"
+                id="atmTransfer"
+              />
+              <label class="form-check-label" for="atmTransfer">
+                ATM轉帳
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 發票開立 -->
+        <div class="col-md-6">
+          <div class="cart-border p-6">
+            <h5 class="text-neutral-800 mb-4">發票開立</h5>
+            <div class="mb-4">
+              <select class="form-select" id="invoiceSelect">
+                <option value="personalInvoice" selected>個人發票</option>
+                <option value="companyInvoice">公司發票</option>
+              </select>
+            </div>
+
+            <!-- 個人發票開立方式 -->
+            <div class="invoice-block" id="personalBlock">
+              <!-- 會員載具 -->
+              <div class="form-check py-2 ps-7">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="invoiveCarrier"
+                  id="memberCarrier"
+                  checked
+                />
+                <label class="form-check-label" for="memberCarrier">
+                  會員載具
+                </label>
+              </div>
+              <!-- 條碼輸入 -->
+              <div id="invoiceCollapseGroup">
+                <!-- 手機條碼 -->
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="form-check py-2 ps-7 me-8">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="invoiveCarrier"
+                      id="mobileBarcode"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#mobileBarcodeInput"
+                    />
+                    <label class="form-check-label" for="mobileBarcode">
+                      手機條碼
+                    </label>
+                  </div>
+                  <div
+                    class="collapse flex-grow-1"
+                    id="mobileBarcodeInput"
+                    data-bs-parent="#invoiceCollapseGroup"
+                  >
+                    <input
+                      class="form-control rounded-3"
+                      type="text"
+                      placeholder="請填寫手機條碼"
+                      style="height: 40px"
+                    />
+                  </div>
+                </div>
+                <!-- 自然人憑證 -->
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="form-check py-2 ps-7 me-8">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="invoiveCarrier"
+                      id="citizenDigitalCertificate"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#citizenDigitalCertificateInput"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="citizenDigitalCertificate"
+                    >
+                      自然人憑證
+                    </label>
+                  </div>
+                  <div
+                    class="collapse flex-grow-1"
+                    id="citizenDigitalCertificateInput"
+                    data-bs-parent="#invoiceCollapseGroup"
+                  >
+                    <input
+                      class="form-control rounded-3"
+                      type="text"
+                      placeholder="請填寫自然人憑證"
+                      style="height: 40px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--公司發票區塊-->
+            <div class="invoice-block" id="companyBlock" style="display: none">
+              <div class="mb-4">
+                <label for="companyName" class="form-label">
+                  公司抬頭<span class="fs-7 text-alert-500 align-top ms-1"
+                    >*</span
+                  >
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="companyName"
+                  placeholder="請填寫公司抬頭"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="unifiedNumber" class="form-label">
+                  統一編號<span class="fs-7 text-alert-500 align-top ms-1"
+                    >*</span
+                  >
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="unifiedNumber"
+                  placeholder="請填寫統一編號"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--暫設定mt-8，上段區塊設定完成後刪除-->
       <div class="row justify-content-center">
         <button class="btn btn-primary w-50 mt-8 mb-12">
-          <p >確認訂購</p>
+          <p>確認訂購</p>
         </button>
-      </div>      
+      </div>
     </section>
     <%- include('./layout/footer'); -%>
     <!-- 發票選項轉換 -->
     <script>
-        const select = document.getElementById('invoiceSelect');
-        const personalBlock = document.getElementById('personalBlock');
-        const companyBlock = document.getElementById('companyBlock');
+      const select = document.getElementById("invoiceSelect");
+      const personalBlock = document.getElementById("personalBlock");
+      const companyBlock = document.getElementById("companyBlock");
 
-        select.addEventListener('change', function() {
-          if (this.value === 'personalInvoice') {
-            personalBlock.style.display = 'block';
-            companyBlock.style.display = 'none';
-          } else {
-            personalBlock.style.display = 'none';
-            companyBlock.style.display = 'block';
-          }
-        });
+      select.addEventListener("change", function () {
+        if (this.value === "personalInvoice") {
+          personalBlock.style.display = "block";
+          companyBlock.style.display = "none";
+        } else {
+          personalBlock.style.display = "none";
+          companyBlock.style.display = "block";
+        }
+      });
     </script>
-    
+
     <script type="module" src="../main.js"></script>
   </body>
 </html>
