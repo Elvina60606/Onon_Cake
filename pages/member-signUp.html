@@ -9,15 +9,43 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <section class="bg-success-300" style="height: 250px">首購優惠區塊</section>
+    <section class="bg-primary-500">
+      <div class="container">
+        <div class="pt-8 py-lg-4">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6">
+              <div
+                class="px-lg-8 text-center text-lg-start"
+              >
+                <h3 class="fs-lg-2 text-primary-800 mb-6">
+                  加入會員，即享首購不限金額88折
+                </h3>
+                <p class="fs-6 text-primary-700 mb-6 mb-lg-0">
+                  會員可享多重優惠：專屬折扣、紅利點數、生日優惠，現在加入會員，首購優惠與寄甜計畫合併使用，即贈經典原味可麗露乙份，贈品數量有限贈完為止，敬請把握優惠。本活動不可與其他優惠合併使用。
+                </p>
+              </div>
+            </div>
+            <div class="col-7 col-lg-3">
+              <div class="pb-lg-0 pb-8 text-center text-lg-start">
+                <img
+                  class="w-75"
+                  src="/assets/images/join-us.png"
+                  alt="加入會員插圖"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-    <main class="bg-light">
+    <main class="bg-light pb-8">
 <!--隱私權政策-->
       <div class="bg-neutral-400 py-1">
         <p class="fs-5 text-center">會員加入須知</p>
       </div>
-      <div class="d-flex justify-content-center py-6">
-            <div class="form-check mb-0">
+      <div class="d-flex justify-content-center p-6">
+            <div class="form-check mb-0 fs-6 fs-lg-5">
                 <input class="form-check-input" 
                        type="checkbox" 
                        value="" 
@@ -168,11 +196,13 @@
           </div>
       </div>
 <!--確認送出btn-->
-      <a class="d-block btn btn-confirm btn-primary-300 text-white w-25 mb-8 mx-auto" 
-         data-bs-toggle="modal" 
-         data-bs-target="#signUpConfirm">
-          確認送出
-      </a>
+      <div class="w-25 mx-auto">
+        <a class="d-block btn btn-confirm btn-primary-300 text-white fs-6 fs-lg-5 pointer" 
+           data-bs-toggle="modal" 
+           data-bs-target="#signUpConfirm">
+            確認送出
+        </a>
+      </div>
   <!--註冊成功modal-->
        <div class="modal fade" 
                  id="signUpConfirm" 
@@ -198,7 +228,9 @@
                     <div class="col-7">
                       <h6 class="fs-lg-5 mb-1">恭喜您註冊成功！</h6>
                       <p class="fs-7 fs-lg-6 mb-2">首購折扣優惠卷已匯入您的帳戶</p>
-                      <a class="d-block btn btn-confirm btn-primary-300 text-white w-75 mb-2 me-auto" href="member-login.html">立即登入</a>
+                      <a class="d-block btn btn-confirm btn-primary-300 text-white w-75 mb-2 me-auto pointer" 
+                         href="member-login.html">立即登入
+                      </a>
                     </div>
                 </div>
               </div>
