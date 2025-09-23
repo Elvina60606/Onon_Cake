@@ -16,43 +16,65 @@
           <nav>
             <ul class="sidebar">
               <li class="sidebar-item active">
-                <a href="product.html" ><h5>商品總覽</h5></a>
+                <a href="product.html"><h5 class="fs-md-6 fs-lg-5">商品總覽</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>可麗露</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">可麗露</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>巴斯克</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">巴斯克</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>瑪德蓮</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">瑪德蓮</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>法式小塔</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">法式小塔</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>寄甜計畫</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">寄甜計畫</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>中秋禮盒</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">中秋禮盒</h5></a>
               </li>
             </ul>
           </nav>
         </div>
         <!-- product cards -->
         <section class="col-12 col-md-9">
-          <h2 class="fs-3 fs-lg-2">商品介紹</h2>
-          <div class="row py-8 g-6">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+          <h2 class="fs-3 fs-lg-2 mb-6 mb-md-0">商品介紹</h2>
+          <!-- 手機版商品下拉選單 -->
+          <div class="dropdown d-block d-md-none">
+            <a
+              class="form-select text-primary-800 text-start py-2"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              商品總覽
+            </a>
+
+            <ul class="dropdown-menu w-100 mt-1" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item " href="#">可麗露</a></li>
+              <li><a class="dropdown-item " href="#">巴斯克</a></li>
+              <li><a class="dropdown-item " href="#">瑪德蓮</a></li>
+              <li><a class="dropdown-item " href="#">法式小塔</a></li>
+              <li><a class="dropdown-item " href="#">寄甜計畫</a></li>
+              <li><a class="dropdown-item " href="#">中秋禮盒</a></li>
+            </ul>
+          </div>
+          <div class="row py-6 py-md-8 g-6">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/canele.png"
                     class="card-img-top"
                     alt="canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       經典原味可麗露
                     </h4></a
@@ -61,7 +83,7 @@
                     外酥內嫩焦糖香，法式經典一口入魂
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -73,16 +95,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/lemon-curd-canele.png"
                     class="card-img-top"
                     alt="lemon-curd-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       檸檬凝乳可麗露
                     </h4></a
@@ -91,7 +113,7 @@
                     酸香清爽，濃郁檸檬奶香交織
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -103,16 +125,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/caramel-almond-canele.png"
                     class="card-img-top"
                     alt="caramel-almond-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       焦糖杏仁可麗露
                     </h4></a
@@ -121,7 +143,7 @@
                     焦糖脆香融合堅果濃郁口感
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -133,16 +155,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/orange-chocolate-canele.png"
                     class="card-img-top"
                     alt="orange-chocolate-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       橙香巧克力可麗露
                     </h4></a
@@ -151,7 +173,7 @@
                     柑橘清香與濃巧克力完美結合
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -163,16 +185,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/hojicha-canele.png"
                     class="card-img-top"
                     alt="hojicha-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       日本焙茶可麗露
                     </h4></a
@@ -181,7 +203,7 @@
                     茶香馥郁，甘醇回韻伴隨焦糖脆皮
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -193,16 +215,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/original-basque.png"
                     class="card-img-top"
                     alt="original-basque"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       經典原味巴斯克
                     </h4></a
@@ -211,7 +233,7 @@
                     乳香濃郁，入口綿密焦香迷人
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -223,16 +245,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/chocolate-basque.png"
                     class="card-img-top"
                     alt="chocolate-basque"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       法國巧克力巴斯克
                     </h4></a
@@ -241,7 +263,7 @@
                     濃厚可可，綿密口感極致奢華享受
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -253,16 +275,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/lemon-madeleine.png"
                     class="card-img-top"
                     alt="lemon-madeleine"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       糖漬檸檬瑪德蓮
                     </h4></a
@@ -271,7 +293,7 @@
                     檸檬清香，甜中帶酸爽口不膩
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -283,16 +305,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="../assets/images/breton-biscuit.png"
                     class="card-img-top"
                     alt="breton-biscuit"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       布列塔尼酥餅
                     </h4></a
@@ -301,7 +323,7 @@
                     奶油濃香，鬆脆口感經典法式風味
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -314,7 +336,7 @@
               </div>
             </div>
           </div>
-          <!--pagination引入用-->
+          <!--pagination-->
           <nav aria-label="Page navigation example">
             <ul
               class="pagination justify-content-center align-items-center gap-2"
