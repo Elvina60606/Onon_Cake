@@ -12,7 +12,7 @@
     <a href="shopping-cart.html" class="nav-link d-lg-none">
       <div class="position-relative">
         <span class="material-symbols-outlined fill align-bottom text-primary"> shopping_cart</span>
-        <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
+        <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">2</span>
       </div>
     </a>
 <!--漢堡按鈕-->
@@ -25,14 +25,61 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!--手機版start-->
-      <ul class="navbar-nav ms-auto mb-5 align-items-center d-lg-none">
-        <form class="position-relative d-lg-none my-5 w-100">
+      <ul class="navbar-nav ms-auto my-5 align-items-center d-lg-none">
+        <form class="position-relative d-lg-none mb-5 w-100">
               <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
               <input class="form-control input-search ps-10" 
                      type="search"
                      placeholder="輸入關鍵字">
               <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
         </form>
+    <!--漢堡選單裡的那條分隔線-->
+        <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+             style="height: 4px">
+        </div>
+    <!--漢堡選的裡的那條分隔線end-->
+        <li class="d-flex justify-content-start align-items-center pb-5 w-100">
+          <img src="../assets/images/avatar.png" 
+               alt="avatar"
+               style="width: 60px; height: 60px"
+               class="border rounded-circle me-6">
+          <div>
+            <p class="text-primary-300">會員</p>
+            <p class="text-primary-800">Claire158872</p>
+          </div>
+        </li>
+<!--待補：會員資料連結-->   
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">會員資料</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+<!--待補：訂單資料連結-->
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">訂單紀錄</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+<!--待補：獨享優惠連結-->
+        <li class="nav-item d-lg-none w-100 mb-5">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">獨享優惠</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+  <!--漢堡選單裡的那條分隔線-->
+        <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+             style="height: 4px">
+        </div>
+  <!--漢堡選的裡的那條分隔線end-->
  <!--待補：最新消息連結-->
         <li class="nav-item d-lg-none w-100">
           <a class="nav-link py-0" href="#">
@@ -52,11 +99,14 @@
         </li>
       </ul>
     <!--漢堡選單裡的那條分隔線-->
-      <div class="bg-primary-500 d-lg-none w-100" style="height: 4px"></div>
+      <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+           style="height: 4px">
+      </div>
     <!--漢堡選的裡的那條分隔線end-->
-      <a class="nav-link w-100 d-lg-none d-flex align-items-center pt-7 pb-3" href="member-login.html">
+      <a class="nav-link w-100 d-lg-none d-flex align-items-center pb-3" 
+         href="member-login.html">
           <span class="material-symbols-outlined text-primary-300 align-bottom me-2" style="width: 20px; height: 20px;">login</span>
-          <p class="h6 text-primary-800">註冊/登入</p>
+          <p class="h6 text-primary-800">登出</p>
       </a>
       <div class="empty-section d-lg-none"></div>
 <!--手機版end-->
@@ -90,14 +140,15 @@
           <a href="shopping-cart" class="nav-link">
             <div class="position-relative">
               <span class="material-symbols-outlined fill align-bottom"> shopping_cart</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">2</span>
             </div>
           </a>
         </li>
         <li class="nav-item">
-          <a href="member-login.html"
-             class="btn btn-primary">註冊/登入
-          </a>
+          <img src="../assets/images/avatar.png" 
+               alt="avatar"
+               style="width: 40px; height: 40px"
+               class="border rounded-circle">
         </li>
       </ul> 
 <!--桌機版end-->
