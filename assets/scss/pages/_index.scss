@@ -199,10 +199,9 @@
       .hero-container {
         max-width: 375px;
         margin: 0 auto;
-        margin-top: -40px;
-        padding-left: 12px;
-        padding-right: 12px;
         position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
 
       .hero-carousel {
@@ -212,7 +211,6 @@
 
       .carousel-item img {
         width: 100%;
-        max-height: 351px;
         border-radius: 16px;
         object-fit: cover;
         overflow: hidden;

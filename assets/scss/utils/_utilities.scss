@@ -24,6 +24,10 @@ body {
   line-height: 24px;
 }
 
+.lh-288{
+  line-height: 28.8px;
+}
+
 .lh-336{
   line-height: 33.6px;
 }
@@ -38,4 +42,8 @@ body {
 
 .nowrap{
   white-space: nowrap;
+}
+
+.icon-filled {
+  font-variation-settings: 'FILL' 1;
 }
