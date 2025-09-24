@@ -10,8 +10,8 @@
     <%- include('./layout/header'); -%>
 
     <section class="bg-primary-500">
-      <div class="container">
-        <div class="pt-8 py-lg-4">
+      <div class="container py-9">
+        <div class="py-lg-4">
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-6">
               <div
@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="col-7 col-lg-3">
-              <div class="pb-lg-0 pb-8 text-center text-lg-start">
+              <div class="pb-lg-0 text-center text-lg-start">
                 <img
                   class="w-75"
                   src="/assets/images/join-us.png"
@@ -39,7 +39,7 @@
       </div>
     </section>
     
-    <main class="bg-light pb-8">
+    <main class="bg-light">
 <!--隱私權政策-->
       <div class="bg-neutral-400 py-1">
         <p class="fs-5 text-center">會員加入須知</p>
@@ -65,7 +65,7 @@
       <div class="bg-neutral-400 py-1">
       <p class="fs-5 text-center">會員資料填寫</p>
       </div>    
-      <div class="container">
+      <div class="container pt-6 pb-8">
         <div class="row justify-content-center">
   <!--左側：姓名＆電話-->
           <div class="col-lg-4 pt-6">
@@ -140,11 +140,11 @@
         <form class="row gy-2 gx-3 justify-content-center align-items-center pb-6">
           <div class="col-lg-8">
             <div class="row">
-              <div class="col-auto">
+              <div class="col-4 col-md-auto">
                 <label class="form-label fs-5 ps-2" for="postCode">地址</label>
                 <input type="text" class="form-control" id="postCode" placeholder="郵遞區號">
               </div>
-              <div class="col-auto pt-38">
+              <div class="col-4 col-md-auto pt-38">
                 <label class="visually-hidden" for="city">縣市</label>
                 <select class="form-select" id="city">
                   <option selected>縣市</option>
@@ -169,7 +169,7 @@
                   <option value="outlyingIslandDistrict">外島地區</option>
                 </select>
               </div>
-              <div class="col-auto pt-38">
+              <div class="col-4 col-md-auto pt-38">
                 <label class="visually-hidden" for="district">鄉鎮市區</label>
                 <select class="form-select" id="district">
                   <option selected>鄉鎮市區</option>
@@ -184,7 +184,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-8 mb-3">
+          <div class="col-lg-8 mb-6">
             <label for="address" 
                    class="visually-hidden">
             </label>
@@ -194,15 +194,16 @@
                    placeholder="請輸入地址"
             >
           </div>
+
+          <div class="col-4 col-lg-5">
+            <a class="d-block btn btn-confirm btn-primary-300 text-white fs-6 fs-lg-5 pointer" 
+               data-bs-toggle="modal" 
+               data-bs-target="#signUpConfirm">
+                確認送出
+            </a>
+          </div>
       </div>
 <!--確認送出btn-->
-      <div class="w-25 mx-auto">
-        <a class="d-block btn btn-confirm btn-primary-300 text-white fs-6 fs-lg-5 pointer" 
-           data-bs-toggle="modal" 
-           data-bs-target="#signUpConfirm">
-            確認送出
-        </a>
-      </div>
   <!--註冊成功modal-->
        <div class="modal fade" 
                  id="signUpConfirm" 

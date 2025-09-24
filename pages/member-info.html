@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+  </head>
+  <body>
+    <%- include('./layout/header-login'); -%>
+
+    <main class="container py-8">
+      <div class="row justify-content-center">
+      <!--左側side bar-->
+        <div class="col-4">
+          <ul class="d-flex flex-column justify-content-center align-items-center li-style-none" 
+              id="myTab" role="tablist">
+              <h5>會員中心</h5>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link active" 
+                          id="modifyMemberInfo-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#modifyMemberInfo" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="modifyMemberInfo" 
+                          aria-selected="true">
+                          修改會員資料
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" 
+                          id="changePassword-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#changePassword" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="changePassword" 
+                          aria-selected="false">
+                          修改密碼
+                  </button>
+              </li>
+          </ul>
+        </div>
+      <!--右側內容-->
+        <div class="col-8">
+          <div class="tab-content">
+            <div class="tab-pane active" 
+                 id="modifyMemberInfo" 
+                 role="tabpanel" 
+                 aria-labelledby="modifyMemberInfo-tab" 
+                 tabindex="0">
+                 修改會員資料
+            </div>
+            <div class="tab-pane" 
+                 id="changePassword" 
+                 role="tabpanel" 
+                 aria-labelledby="changePassword-tab" 
+                 tabindex="0">
+                 修改密碼
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
