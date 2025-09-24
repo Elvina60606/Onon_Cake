@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onon_cake｜商品介紹</title>
-    <script type="module" crossorigin src="/Onon_Cake/assets/main-qcUeGatx.js"></script>
-    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-Cunb-o30.css">
+    <script type="module" crossorigin src="/Onon_Cake/assets/main-DjzKz7OO.js"></script>
+    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-DFWNxxGZ.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
   <div class="container">
 <!--navbar logo-->
     <a class="navbar-brand me-auto py-0" href="index.html">
@@ -23,7 +23,7 @@
     <a href="shopping-cart.html" class="nav-link d-lg-none">
       <div class="position-relative">
         <span class="material-symbols-outlined fill align-bottom text-primary"> shopping_cart</span>
-        <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">0</span>
+        <span class="position-absolute top-0 start-100 translate-middle badge border border-white bg-secondary-500">2</span>
       </div>
     </a>
 <!--漢堡按鈕-->
@@ -36,14 +36,61 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!--手機版start-->
-      <ul class="navbar-nav ms-auto mb-5 align-items-center d-lg-none">
-        <form class="position-relative d-lg-none my-5 w-100">
+      <ul class="navbar-nav ms-auto my-5 align-items-center d-lg-none">
+        <form class="position-relative d-lg-none mb-5 w-100">
               <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ps-5 text-primary">search</span>
               <input class="form-control input-search ps-10" 
                      type="search"
                      placeholder="輸入關鍵字">
               <button class="btn btn-search btn-primary fw-medium position-absolute top-50 end-0 translate-middle-y me-2">搜尋</button>
         </form>
+    <!--漢堡選單裡的那條分隔線-->
+        <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+             style="height: 4px">
+        </div>
+    <!--漢堡選的裡的那條分隔線end-->
+        <li class="d-flex justify-content-start align-items-center pb-5 w-100">
+          <img src="/Onon_Cake/assets/avatar-XKrzyOZv.png" 
+               alt="avatar"
+               style="width: 60px; height: 60px"
+               class="border rounded-circle me-6">
+          <div>
+            <p class="text-primary-300">會員</p>
+            <p class="text-primary-800">Claire158872</p>
+          </div>
+        </li>
+<!--待補：會員資料連結-->   
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">會員資料</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+<!--待補：訂單資料連結-->
+        <li class="nav-item d-lg-none w-100">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">訂單紀錄</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+<!--待補：獨享優惠連結-->
+        <li class="nav-item d-lg-none w-100 mb-5">
+          <a class="nav-link py-0" href="#">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <p class="h6 text-primary-800 mb-0">獨享優惠</p>
+              <span class="material-symbols-outlined text-primary-300" style="width: 20px"> arrow_forward_ios</span>
+            </div>
+          </a>
+        </li>
+  <!--漢堡選單裡的那條分隔線-->
+        <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+             style="height: 4px">
+        </div>
+  <!--漢堡選的裡的那條分隔線end-->
  <!--待補：最新消息連結-->
         <li class="nav-item d-lg-none w-100">
           <a class="nav-link py-0" href="#">
@@ -63,11 +110,14 @@
         </li>
       </ul>
     <!--漢堡選單裡的那條分隔線-->
-      <div class="bg-primary-500 d-lg-none hr-line w-100" style="height: 4px"></div>
+      <div class="bg-primary-500 d-lg-none w-100 mb-5" 
+           style="height: 4px">
+      </div>
     <!--漢堡選的裡的那條分隔線end-->
-      <a class="nav-link w-100 d-lg-none d-flex align-items-center pt-7 pb-3" href="member-login.html">
+      <a class="nav-link w-100 d-lg-none d-flex align-items-center pb-3" 
+         href="member-login.html">
           <span class="material-symbols-outlined text-primary-300 align-bottom me-2" style="width: 20px; height: 20px;">login</span>
-          <p class="h6 text-primary-800">註冊/登入</p>
+          <p class="h6 text-primary-800">登出</p>
       </a>
       <div class="empty-section d-lg-none"></div>
 <!--手機版end-->
@@ -126,43 +176,65 @@
           <nav>
             <ul class="sidebar">
               <li class="sidebar-item active">
-                <a href="product.html" ><h5>商品總覽</h5></a>
+                <a href="product.html"><h5 class="fs-md-6 fs-lg-5">商品總覽</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>可麗露</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">可麗露</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>巴斯克</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">巴斯克</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>瑪德蓮</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">瑪德蓮</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>法式小塔</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">法式小塔</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>寄甜計畫</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">寄甜計畫</h5></a>
               </li>
               <li class="sidebar-item">
-                <a href="#"><h5>中秋禮盒</h5></a>
+                <a href="#"><h5 class="fs-md-6 fs-lg-5">中秋禮盒</h5></a>
               </li>
             </ul>
           </nav>
         </div>
         <!-- product cards -->
         <section class="col-12 col-md-9">
-          <h2 class="fs-3 fs-lg-2">商品介紹</h2>
-          <div class="row py-8 g-6">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+          <h2 class="fs-3 fs-lg-2 mb-6 mb-md-0">商品介紹</h2>
+          <!-- 手機版商品下拉選單 -->
+          <div class="dropdown d-block d-md-none">
+            <a
+              class="form-select text-primary-800 text-start py-2"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              商品總覽
+            </a>
+
+            <ul class="dropdown-menu w-100 mt-1" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item " href="#">可麗露</a></li>
+              <li><a class="dropdown-item " href="#">巴斯克</a></li>
+              <li><a class="dropdown-item " href="#">瑪德蓮</a></li>
+              <li><a class="dropdown-item " href="#">法式小塔</a></li>
+              <li><a class="dropdown-item " href="#">寄甜計畫</a></li>
+              <li><a class="dropdown-item " href="#">中秋禮盒</a></li>
+            </ul>
+          </div>
+          <div class="row py-6 py-md-8 g-6">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="/Onon_Cake/assets/canele-CVTibPu7.png"
                     class="card-img-top"
                     alt="canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       經典原味可麗露
                     </h4></a
@@ -171,7 +243,7 @@
                     外酥內嫩焦糖香，法式經典一口入魂
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -183,16 +255,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="/Onon_Cake/assets/lemon-curd-canele-BTjOVG4z.png"
                     class="card-img-top"
                     alt="lemon-curd-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       檸檬凝乳可麗露
                     </h4></a
@@ -201,7 +273,7 @@
                     酸香清爽，濃郁檸檬奶香交織
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -213,16 +285,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="/Onon_Cake/assets/caramel-almond-canele-Dg7Yt6C1.png"
                     class="card-img-top"
                     alt="caramel-almond-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       焦糖杏仁可麗露
                     </h4></a
@@ -231,7 +303,7 @@
                     焦糖脆香融合堅果濃郁口感
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -243,16 +315,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
                     src="/Onon_Cake/assets/orange-chocolate-canele-BDJ9FH9j.png"
                     class="card-img-top"
                     alt="orange-chocolate-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       橙香巧克力可麗露
                     </h4></a
@@ -261,7 +333,7 @@
                     柑橘清香與濃巧克力完美結合
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -273,16 +345,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
-                    src="/Onon_Cake/assets/hojicha-canele-DjKjQSF1.png"
+                    src="/Onon_Cake/assets/hojicha-canele-Cd9IYai5.png"
                     class="card-img-top"
                     alt="hojicha-canele"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       日本焙茶可麗露
                     </h4></a
@@ -291,7 +363,7 @@
                     茶香馥郁，甘醇回韻伴隨焦糖脆皮
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -303,16 +375,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
-                    src="/Onon_Cake/assets/original-basque-mG_gmPnZ.png"
+                    src="/Onon_Cake/assets/original-basque-Dd5sVZAj.png"
                     class="card-img-top"
                     alt="original-basque"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       經典原味巴斯克
                     </h4></a
@@ -321,7 +393,7 @@
                     乳香濃郁，入口綿密焦香迷人
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -333,16 +405,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
-                    src="/Onon_Cake/assets/chocolate-basque-BHbvYRdq.png"
+                    src="/Onon_Cake/assets/chocolate-basque-B0umS76U.png"
                     class="card-img-top"
                     alt="chocolate-basque"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       法國巧克力巴斯克
                     </h4></a
@@ -351,7 +423,7 @@
                     濃厚可可，綿密口感極致奢華享受
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 240</h4>
                     <button class="btn btn-card-cart px-6">
@@ -363,16 +435,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
-                    src="/Onon_Cake/assets/lemon-madeleine-CU9UdCXZ.png"
+                    src="/Onon_Cake/assets/lemon-madeleine-BqullUR3.png"
                     class="card-img-top"
                     alt="lemon-madeleine"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       糖漬檸檬瑪德蓮
                     </h4></a
@@ -381,7 +453,7 @@
                     檸檬清香，甜中帶酸爽口不膩
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 150</h4>
                     <button class="btn btn-card-cart px-6">
@@ -393,16 +465,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <a href="#"
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <a href="product-detail.html"
                   ><img
-                    src="/Onon_Cake/assets/breton-biscuit-Cy0XOQBD.png"
+                    src="/Onon_Cake/assets/breton-biscuit-BLTVYFE_.png"
                     class="card-img-top"
                     alt="breton-biscuit"
                 /></a>
-                <div class="card-body">
-                  <a href="#"
+                <div class="card-body d-flex flex-column">
+                  <a href="product-detail.html"
                     ><h4 class="card-title text-primary-800">
                       布列塔尼酥餅
                     </h4></a
@@ -411,7 +483,7 @@
                     奶油濃香，鬆脆口感經典法式風味
                   </p>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="mt-auto d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-primary-700">NT$ 180</h4>
                     <button class="btn btn-card-cart px-6">
@@ -424,7 +496,7 @@
               </div>
             </div>
           </div>
-          <!--pagination引入用-->
+          <!--pagination-->
           <nav aria-label="Page navigation example">
             <ul
               class="pagination justify-content-center align-items-center gap-2"
@@ -467,10 +539,10 @@
                 <a class="page-link" href="#">5</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">6</a>
+                <a class="page-link d-none d-lg-block" href="#">6</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">7</a>
+                <a class="page-link d-none d-lg-block" href="#">7</a>
               </li>
               <li class="page-item">
                 <a class="page-link pagination-icon" href="#" aria-label="Next">
