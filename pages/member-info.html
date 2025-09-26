@@ -12,7 +12,7 @@
     <main class="container py-8">
       <div class="row justify-content-center">
       <!--左側side bar-->
-        <div class="col-3">
+        <aside class="col-3">
           <ul class="d-flex flex-column justify-content-center align-items-center p-0 m-0 border rounded-3 li-style-none overflow-hidden" 
               id="myTab" role="tablist">
               <li class="bg-secondary-50 w-100 border-bottom">
@@ -43,10 +43,10 @@
                   </button>
               </li>
           </ul>
-        </div>
+        </aside>
       <!--右側內容-->
       <!--修改會員資料內容-->
-        <div class="col-9">
+        <div class="col-8">
           <div class="tab-content">
             <div class="tab-pane active" 
                  id="modifyMemberInfo" 
@@ -56,7 +56,7 @@
               <div class="row">
             <!--姓名&電話-->
                 <div class="col-lg-6">
-                  <div class="mb-3">
+                  <div class="mb-4">
                       <label for="memberName" 
                              class="form-label">
                         <span class="fs-5 ps-2">姓名</span>
@@ -84,7 +84,7 @@
                              id="memberName" 
                              placeholder="">
                   </div>
-                  <div class="mb-3">
+                  <div class="mb-4">
                     <label for="memberPhone" 
                            class="form-label">
                        <span class="fs-5 ps-2">電話</span>
@@ -97,7 +97,7 @@
                 </div>
             <!--生日&信箱-->
                 <div class="col-lg-6">
-                  <div class="mb-3">
+                  <div class="mb-4">
                       <label for="memberBirthday" 
                              class="form-label">
                             <span class="fs-5 ps-2">生日</span>
@@ -107,7 +107,7 @@
                              id="memberBirthday" 
                       >
                   </div>
-                  <div class="mb-3">
+                  <div class="mb-4">
                     <label for="memberEmail" 
                            class="form-label">
                            <span class="fs-5 ps-2">電子信箱</span>
@@ -167,7 +167,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-10 mb-3">
+                  <div class="col-lg-8 mb-4">
                     <label for="address" 
                            class="visually-hidden">
                     </label>
@@ -178,20 +178,20 @@
                     >
                   </div>
             <!--預設發票開立方式-->
-                  <p class="fs-5 ps-2 mb-2">預設發票開立方式</p>
-                    <div class="d-flex">
-                      <div class="col-lg-3">
-                        <div class="mb-3">                   
-                            <div class="mb-4">
-                              <select class="form-select" id="invoiceSelect">
-                                <option value="personalInvoice" selected>個人發票</option>
-                                <option value="companyInvoice">公司發票</option>
-                              </select>
-                            </div>
+                  <div class="col-12 ms-2 mb-2">
+                    <p class="fs-5">預設發票開立方式</p>
+                  </div>
+                    <div class="d-flex flex-column flex-lg-row gap-lg-6">
+                      <div class="col-lg-4">
+                        <div class="mb-4">                   
+                            <select class="form-select" id="invoiceSelect">
+                              <option value="personalInvoice" selected>個人發票</option>
+                              <option value="companyInvoice">公司發票</option>
+                            </select>
                         </div>
                       </div>
-                  <!-- 個人發票開立方式 -->
-                      <div class="col-lg-6 invoice-block" id="personalBlock">
+                  <!--個人發票-->
+                      <div class="col-lg-7" id="personalBlock">
                         <!-- 會員載具 -->
                         <div class="form-check py-2 ps-7">
                           <input
@@ -223,7 +223,7 @@
                                 </label>
                               </div>
                               <div
-                                class="collapse flex-grow-1"
+                                class="collapse flex-grow-1 mb-4"
                                 id="mobileBarcodeInput"
                                 data-bs-parent="#invoiceCollapseGroup"
                               >
@@ -254,7 +254,7 @@
                             </label>
                               </div>
                               <div
-                                class="collapse flex-grow-1"
+                                class="collapse flex-grow-1 mb-4"
                                 id="citizenDigitalCertificateInput"
                                 data-bs-parent="#invoiceCollapseGroup"
                               >
@@ -268,22 +268,85 @@
                             </div>
                         </div>
                       </div>
+                  <!--公司發票-->
+                      <div class="col-lg-7" id="companyBlock" style="display: none">
+                          <div class="mb-4">
+                            <label for="companyName" class="form-label ps-2">
+                                    公司抬頭<span class="fs-7 text-alert-500 align-top ms-1"> *</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="companyName"
+                              placeholder="請填寫公司抬頭"
+                            />
+                          </div>
+                          <div class="mb-4">
+                            <label for="unifiedNumber" class="form-label ps-2">
+                                    統一編號<span class="fs-7 text-alert-500 align-top ms-1"
+                                    >*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="unifiedNumber"
+                              placeholder="請填寫統一編號"
+                            />
+                          </div>
+                      </div>
                     </div>
             </div>
-
-
-
-
-
-
-
       <!--修改密碼內容-->
             <div class="tab-pane" 
                  id="changePassword" 
                  role="tabpanel" 
                  aria-labelledby="changePassword-tab" 
                  tabindex="0">
-                 修改密碼
+              <div class="row py-6">
+                <div class="col-7 mb-4">
+                  <label for="pastPassword" 
+                         class="form-label fs-5">
+                         舊密碼
+                  </label>
+                  <input type="password" 
+                         id="pastPassword" 
+                         class="form-control" 
+                         aria-describedby="pastPasswordHelpBlock">
+                </div>
+                <div class="col-7 mb-4">
+                  <label for="newPassword" 
+                         class="form-label fs-5">
+                         新密碼
+                  </label>
+                  <input type="password" 
+                         id="newPassword" 
+                         class="form-control" 
+                         aria-describedby="newPasswordHelpBlock">
+                    <span id="newPasswordHelpBlock" 
+                          class="form-text">請輸入8-12位半形英文數字
+                    </span>
+                </div>
+                <div class="col-7 mb-4">
+                  <label for="checkNewPassword" 
+                         class="form-label fs-5">
+                         確認新密碼
+                  </label>
+                  <input type="password" 
+                         id="checkNewPassword" 
+                         class="form-control" 
+                         aria-describedby="checkNewPasswordHelpBlock">
+                    <span id="checkNewPasswordHelpBlock" 
+                          class="form-text">請輸入8-12位半形英文數字
+                    </span>
+                </div>
+              </div>
+
+
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -291,6 +354,23 @@
     </main>
     
     <%- include('./layout/footer'); -%>
+    
+     <!-- 發票選項轉換 -->
+    <script>
+      const select = document.getElementById("invoiceSelect");
+      const personalBlock = document.getElementById("personalBlock");
+      const companyBlock = document.getElementById("companyBlock");
+
+      select.addEventListener("change", function () {
+        if (this.value === "personalInvoice") {
+          personalBlock.style.display = "block";
+          companyBlock.style.display = "none";
+        } else {
+          personalBlock.style.display = "none";
+          companyBlock.style.display = "block";
+        }
+      });
+    </script>
 
     <script type="module" src="../main.js"></script>
   </body>
