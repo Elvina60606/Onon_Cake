@@ -7,45 +7,115 @@
     <title>會員登入</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
- 
-    <div class="bg-light">
-    <!--容器-->
-      <main class="container py-11">
-        <div class="row justify-content-center">
-          <div class="col-6">
-    <!--登入區塊上方文字-->
-            <div class="mb-8 text-center"> 
-              <p class="h4 mb-2">歡迎登入</p>
-              <p class="h5">OnOn_Cake二溫菓子</p>
+    <div class="d-flex flex-column bg-light" style="min-height: 100dvh">
+      <%- include('./layout/header'); -%>
+   
+      <div class=" my-auto">
+      <!--容器-->
+        <main class="container py-11">
+          <div class="row flex-column justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+      <!--登入區塊上方文字-->
+              <div class="mb-8 text-center"> 
+                <p class="h3 fs-md-2 mb-2 text-primary-700">歡迎登入</p>
+                <p class="h5 fs-md-4 text-primary-700">OnOn_Cake二溫菓子</p>
+              </div>
+        <!--帳號密碼區塊-->
+              <div class="mb-3">
+                <div class="form-floating position-relative mb-3">
+                    <input type="text" 
+                           class="form-control" 
+                           id="floatingInput" 
+                           placeholder="帳號">
+                    <label for="floatingInput">帳號</label>
+                    <span class="material-symbols-outlined text-primary-700 position-absolute top-50 end-0 translate-middle">
+                      lock
+                    </span>
+                </div>
+                <div class="form-floating position-relative">
+                    <input type="password"      
+                           class="form-control"     
+                           id="floatingPassword" 
+                           placeholder="Password">
+                    <label for="floatingPassword">密碼</label>
+                    <span class="material-symbols-outlined text-primary-700 position-absolute  top-50 end-0 translate-middle">
+                      key
+                    </span>
+                </div>
+              </div>
+        <!--忘記密碼-->
+              <a  class="d-block text-end text-neutral-600 pointer mb-4" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#staticBackdrop">
+                  忘記密碼
+              </a>
+          <!--忘記密碼modal-->
+              <div class="modal fade" 
+                   id="staticBackdrop" 
+                   data-bs-backdrop="static" 
+                   data-bs-keyboard="false" 
+                   tabindex="-1" 
+                   aria-labelledby="staticBackdropLabel" 
+                   aria-hidden="true"
+              >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header border-bottom-0">
+                      <button type="button" 
+                              class="btn-close" 
+                              data-bs-dismiss="modal" 
+                              aria-label="Close">
+                      </button>
+                  </div>
+                  <div class="modal-body row justify-content-center align-items-center mb-7">
+                      <div class="col-3">
+                        <img src="../assets/images/canele-2.png" alt="canele-2">
+                      </div>
+                      <div class="col-7">
+                        <h6 class="fs-lg-5 mb-1">忘記密碼</h6>
+                        <p class="fs-7 fs-lg-6 mb-2">請輸入您註冊會員的信箱</p>
+                        <div class="position-relative mb-2">
+                          <input type="email" 
+                                 class="form-control form-control-sm" 
+                                 id="exampleFormControlInput1" 
+                                 placeholder="信箱"
+                          >
+                          <span class="material-symbols-outlined position-absolute top-50 end-0 translate-middle-y me-1 text-primary-600">
+                            mail
+                          </span>
+                        </div>
+                        <button type="submit"
+                                class="d-block btn btn-confirm btn-primary-300 text-white w-75 mb-2 me-auto pointer fs-7">
+                                立即發送
+                        </button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+          <!--忘記密碼modal end-->
             </div>
-      <!--登入區塊-->
-            <div class="form-floating mb-3">
-                <input type="text" 
-                       class="form-control" 
-                       id="floatingInput" 
-                       placeholder="帳號">
-                <label for="floatingInput">帳號</label>
+        <!--會員登入按鈕-->
+            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                <a  href="member-info.html"
+                    class="btn btn-confirm btn-primary-300 text-white fs-5 w-50 mb-3">
+                    會員登入
+                </a>
+                <p>還不是會員嗎？
+                  <a class="text-success-900" 
+                     href="member-signUp.html">
+                     手刀加入
+                  </a>
+                </p>
             </div>
-    
-            <div class="form-floating">
-                <input type="password"      
-                       class="form-control"     
-                       id="floatingPassword" 
-                       placeholder="Password">
-                <label for="floatingPassword">密碼</label>
-            </div>
-
           </div>
-
-        </div>
-
-
-      </main>
+        </main>
+  
+      </div>
+      
+      <%- include('./layout/footer'); -%>
 
     </div>
-    
-    <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>
