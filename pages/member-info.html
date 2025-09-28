@@ -12,8 +12,112 @@
   
       <main class="container py-11 mb-auto">
         <div class="row justify-content-center">
-        <!--左側side bar-->
-          <aside class="col-3">
+        <!--手機版side bar-->
+          <aside class="col-12 d-md-none">
+            <ul class="d-flex flex-wrap justify-content-around align-items-center li-style-none p-0 gap-3" 
+                id="myTab" 
+                role="tablist"
+            >
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 active" 
+                            id="modifyMemberInfo-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#modifyMemberInfo" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="modifyMemberInfo" 
+                            aria-selected="true">
+                            <span class="h6 text-primary-800">修改會員<br>資料</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2" 
+                            id="changePassword-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#changePassword" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="changePassword" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">修改密碼</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2" 
+                            id="shoppingHistory-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#shoppingHistory" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="shoppingHistory" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">訂單紀錄</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2" 
+                            id="couponAndPoint-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#couponAndPoint" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="couponAndPoint" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">優惠卷<br>＆點數</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2" 
+                            id="prePaidPlan-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#prePaidPlan" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="prePaidPlan" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">寄甜計劃</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#logOut" 
+                            type="button">
+                            <span class="h6 text-primary-800">登出</span>
+                    </button>
+                </li>
+            </ul>
+        <!--登出modal-->
+            <div class="modal fade" 
+                 id="logOut" 
+                 data-bs-backdrop="static" 
+                 data-bs-keyboard="false" 
+                 tabindex="-1" 
+                 aria-labelledby="logOutLabel" 
+                 aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body ms-7 mt-7">
+                    <p class="fs-5">確定要登出嗎？</p>
+                  </div>
+                  <div class="modal-footer border-0">
+                    <a href="member-login.html" 
+                       class="btn btn-confirm btn-primary-300 text-white">
+                        確定登出
+                    </a>
+                    <button type="button" 
+                            class="btn btn-confirm btn-primary-300 text-white" 
+                            data-bs-dismiss="modal">
+                            關閉
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        <!--桌機版side bar-->
+          <aside class="col-3 d-none d-md-block">
             <ul class="d-flex flex-column justify-content-center align-items-center p-0 m-0 border rounded-3 li-style-none overflow-hidden" 
                 id="myTab" 
                 role="tablist"
@@ -101,26 +205,26 @@
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-body">
-                    <p class="ms-4 mt-6">確定要登出嗎？</p>
+                  <div class="modal-body ms-7 mt-7">
+                    <p class="fs-5">確定要登出嗎？</p>
                   </div>
                   <div class="modal-footer border-0">
-                    <a href="index.html" 
-                       class="btn btn-primary">
+                    <a href="member-login.html" 
+                       class="btn btn-confirm btn-primary-300 text-white">
                         確定登出
                     </a>
                     <button type="button" 
-                            class="btn btn-primary" 
+                            class="btn btn-confirm btn-primary-300 text-white" 
                             data-bs-dismiss="modal">
                             關閉
                     </button>
                   </div>
-    </div>
-  </div>
-</div>
+                </div>
+              </div>
+            </div>
           </aside>
         <!--右側內容-->
-          <div class="col-8">
+          <div class="col-md-8">
             <div class="tab-content">
         <!--修改會員資料內容-->
               <div class="tab-pane active" 
@@ -458,11 +562,8 @@
                    role="tabpanel" 
                    aria-labelledby="prePaidPlan-tab" 
                    tabindex="0">
-                    <p class="fs-4">寄甜功能待開發中...</p>
+                    <p class="fs-4">寄甜計畫功能待開發中...</p>
               </div>
-
-
-
 
             </div>
           </div>
