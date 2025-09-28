@@ -120,3 +120,84 @@
     transform: initial;
   }
 }
+
+// 麵包屑顏色設定
+.my-breadcrumb .breadcrumb-item {
+  color: $neutral-500; /* 文字顏色 (首頁、商品介紹) */
+}
+
+.my-breadcrumb .breadcrumb-item.active {
+  color: $primary-800; /* 最後一個的顏色 */
+}
+
+.my-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: $neutral-500; /* 分隔符號顏色 */
+}
+
+// 原價刪除字樣的顏色
+.text-gray-700{
+  color: #4F4F4F;
+}
+// 字重500
+.fw-500 {
+  font-weight: $font-weight-medium; 
+}
+
+
+/* 整體區塊：滿版 + 左右元素撐開 */
+.cart-actions {
+  display: flex;
+  align-items: center;
+  width: 100%;        /* 撐滿父容器 */
+  gap: 24px;          /* 元素間距 */
+}
+
+/* 數量控制器 (撐開) */
+.quantity-control {
+  flex: 1;            /* 自動撐滿 */
+  display: flex;
+  align-items: center;
+  border: 1px solid $neutral-500;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 40px;
+  max-width: none;   /* 如果不想太長，可以限制 */
+}
+
+.quantity-control input {
+  flex: 1;            /* 中間 input 撐開 */
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.qty-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #f5f5f5;
+}
+
+/* 加入購物車按鈕 (撐開) */
+.add-cart-btn {
+  flex: 1;            /* 自動撐滿 */
+  background: #5a3e2b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  background: #3e2a1f;
+}
+
