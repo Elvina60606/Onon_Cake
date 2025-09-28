@@ -83,3 +83,9 @@
     max-width: 100%;
   }
 }
+
+.list-group-item{
+    &:hover{
+        background-color: $primary-500;
+    }
+}
