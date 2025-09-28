@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -330,6 +338,106 @@
         src="/assets/images/Rectangle 303.svg"
         alt="背景波浪圖案"
       />
+    </section>
+
+    <!-- 熱銷排行 -->
+    <section class="bg-secondary-50">
+      <div class="index-container">
+        <div class="text-center pb-6 pt-8 py-lg-8">
+          <h1 class="fs-3 fs-lg-1">熱銷排行</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-6">
+          <div class="col mb-2 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100 overflow-hidden">
+              <span class="badge rank-badge fs-6">第一名</span>
+              <div class="overflow-hidden">
+                <img
+                  src="/assets/images/canele.png"
+                  class="card-img-top dessert-card"
+                  alt="經典原味可麗露"
+                />
+              </div>
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">經典原味可麗露</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  外酥內嫩焦糖香，法式經典一口入魂
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 180</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-2 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100 overflow-hidden">
+              <span class="badge rank-badge fs-6">第二名</span>
+              <div class="overflow-hidden">
+                <img
+                  src="/assets/images/lemon-madeleine.png"
+                  class="card-img-top dessert-card"
+                  alt="糖漬檸檬瑪德蓮"
+                />
+              </div>
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">糖漬檸檬瑪德蓮</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  清香檸檬糖漬點綴，鬆軟口感酸甜平衡剛剛好
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 150</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-6 mb-lg-8">
+            <div class="card card-shadow rounded-xl h-100 overflow-hidden">
+              <span class="badge rank-badge fs-6">第三名</span>
+              <div class="overflow-hidden">
+                <img
+                  src="/assets/images/basque.png"
+                  class="card-img-top dessert-card"
+                  alt="超濃厚巴斯克"
+                />
+              </div>
+              <div class="card-body p-4">
+                <h4 class="pb-2 text-primary-800">超濃厚巴斯克</h4>
+                <p class="fs-6 text-primary-600 pb-4">
+                  香氣濃烈滑順綿密，入口即化的極致濃厚感
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="h4 text-primary-700">NT$ 240</p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary rounded-pill btn-card-shopping-cart"
+                    style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0"
+                  >
+                    <span class="material-icons"> shopping_cart </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-center align-items-center pb-8 d-lg-none"
+        >
+          <a href="product.html" class="btn btn-light fs-6">更多商品</a>
+        </div>
+      </div>
     </section>
 
     <%- include('./layout/footer'); -%>
