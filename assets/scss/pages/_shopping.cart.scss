@@ -48,7 +48,7 @@
     }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1400px) {
   .address-col-200 {
     flex: 0 0 auto; 
     width: 200px;
@@ -66,7 +66,17 @@
   }
 }
 
-@media (max-width: 991px) {
+/* 平板與小桌機 (768px–1399px) → 自動分配，避免水平捲軸 */
+@media (min-width: 768px) and (max-width: 1399px) {
+  .address-col-200,
+  .address-col-624 {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
   .address-col-200, 
   .address-col-624 {
     flex: 0 0 100%;
