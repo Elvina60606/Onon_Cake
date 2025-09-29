@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <title>購物車</title>
-    <script type="module" crossorigin src="/Onon_Cake/assets/main-DzqL4y25.js"></script>
-    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-Bk4eH3G1.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <title>Onon_cake｜購物車</title>
+    <script type="module" crossorigin src="/Onon_Cake/assets/main-nBA9QeLm.js"></script>
+    <link rel="stylesheet" crossorigin href="/Onon_Cake/assets/main-DK3XHnAh.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -170,9 +173,142 @@
 
 
 
-    <!-- 使用紅利點數與結帳總金額區塊 -->
+    <!-- 上半部 -->
     <section class="bg-neutral-50">
-      <div class="container my-4">
+      <div class="container">
+        <!-- 購物車商品清單 -->
+        <h2 class="fs-3 fs-md-2 text-black pt-8 pt-md-12 mb-6 mb-md-8">
+          購物車商品清單
+        </h2>
+
+        <div>
+          <!-- 購物車標題列 -->
+          <div class="row">
+            <ul
+              class="list-unstyled fs-md-7 fs-lg-6 px-7 mb-4 d-none d-md-flex"
+              style="color: #6f6f6f"
+            >
+              <li class="col-md-7 text-center">商品資料</li>
+              <li class="col-md-1 text-center">單價</li>
+              <li class="col-md-2 text-center">數量</li>
+              <li class="col-md-1 text-center">小計</li>
+              <li class="col-md-1 text-center">刪除</li>
+            </ul>
+          </div>
+
+          <ul class="list-group">
+            <!-- 商品 1 -->
+            <li class="list-group-item rounded-4 px-7 py-4 mb-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-7 d-flex align-items-center">
+                  <img
+                    src="/Onon_Cake/assets/original-basque-Dd5sVZAj.png"
+                    class="rounded me-4"
+                    style="width: 80px; height: 80px"
+                    alt="超濃厚巴斯克"
+                  />
+                  <div>
+                    <h5 class="fs-6 fs-md-5">超濃厚巴斯克</h5>
+                    <p class="fs-6 fw-bold mt-2 d-md-none">NT$ 590</p>
+                  </div>
+                </div>
+                <div class="col-md-1 d-none d-md-block">
+                  <p class="fs-6 fw-bold text-center">NT$ 590</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="row align-items-center">
+                    <div
+                      class="col-5 col-md-6 d-flex justify-content-md-center"
+                    >
+                      <div
+                        class="input-group input-group-sm border rounded-2 bg-white"
+                        style="width: 130px"
+                      >
+                        <button class="btn" type="button">
+                          <i class="bi bi-dash-lg"></i>
+                        </button>
+                        <input
+                          type="number"
+                          class="form-control fs-6 fw-bold text-center border-0"
+                          value="1"
+                        />
+                        <button class="btn" type="button">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-3">
+                      <p class="fs-5 fw-bold text-secondary-500 text-center">
+                        NT$ 590
+                      </p>
+                    </div>
+                    <div class="col-2 col-md-3 text-center">
+                      <button class="btn btn-trash">
+                        <i class="bi bi-trash3-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- 商品 2 -->
+            <li class="list-group-item rounded-4 px-7 py-4 mb-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-7 d-flex align-items-center">
+                  <img
+                    src="/Onon_Cake/assets/product-canele6-f1BtVStp.png"
+                    class="rounded me-4"
+                    style="width: 80px; height: 80px"
+                    alt="經典可麗露禮盒"
+                  />
+                  <div>
+                    <h5 class="fs-6 fs-md-5">經典可麗露禮盒 (6入/盒)</h5>
+                    <p class="fs-6 fw-bold mt-2 d-md-none">NT$ 420</p>
+                  </div>
+                </div>
+                <div class="col-md-1 d-none d-md-block">
+                  <p class="fs-6 fw-bold text-center">NT$ 420</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="row align-items-center">
+                    <div
+                      class="col-5 col-md-6 d-flex justify-content-md-center"
+                    >
+                      <div
+                        class="input-group input-group-sm border rounded-2 bg-white"
+                        style="width: 130px"
+                      >
+                        <button class="btn" type="button">
+                          <i class="bi bi-dash-lg"></i>
+                        </button>
+                        <input
+                          type="number"
+                          class="form-control fs-6 fw-bold text-center border-0"
+                          value="2"
+                        />
+                        <button class="btn" type="button">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-3">
+                      <p class="fs-5 fw-bold text-secondary-500 text-center">
+                        NT$ 840
+                      </p>
+                    </div>
+                    <div class="col-2 col-md-3 text-center">
+                      <button class="btn btn-trash">
+                        <i class="bi bi-trash3-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 使用紅利點數與結帳總金額區塊 -->
         <div class="row g-3">
           <!-- 紅利點數 -->
           <div class="col-12 col-md-4 mt-4">
@@ -256,7 +392,7 @@
         </div>
 
         <!-- 訂單金額區塊 -->
-        <div class="row mt-4 pb-8">
+        <div class="row mt-4 pb-8 pb-md-12">
           <div class="col-12">
             <div
               class="p-5 p-md-6 border rounded-4"
@@ -295,90 +431,138 @@
       </div>
     </section>
 
+    <!-- 下半部 -->
     <!-- 填寫資訊區塊 -->
     <section class="container">
       <div class="shipping-info">
         <h2 class="mt-lg-12 mb-lg-8 mt-8 mb-6">填寫資訊</h2>
         <form class="cart-border p-6 mb-6">
-      
-    <!-- 同會員資料 -->
+          <!-- 同會員資料 -->
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="sameAsMember">
-            <label class="form-check-label" for="sameAsMember">同會員資料</label>
-          </div>
-          
-    <!-- 收件人姓名 & 聯絡電話 -->
-          <div class="gap-2 mb-4 d-md-flex"> 
-              <div style="flex: 1;" class="mb-4 mb-md-0"> 
-                  <label for="recipientName" class="form-label">收件人姓名 <span class="text-danger">*</span></label>
-                  <input 
-                      type="text" 
-                      class="form-control placeholder-neutral-500" 
-                      id="recipientName" 
-                      placeholder="請填寫姓名" 
-                      style="height: 40px; width: 100%;" 
-                  > 
-              </div>
-              <div style="flex: 1;"> 
-                  <label for="phone" class="form-label">聯絡電話 <span class="text-danger">*</span></label>
-                  <input 
-                      type="text" 
-                      class="form-control placeholder-neutral-500" 
-                      id="phone" 
-                      placeholder="請填寫聯絡電話" 
-                      style="height: 40px; width: 100%;"
-                  >
-              </div>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="sameAsMember"
+            />
+            <label class="form-check-label" for="sameAsMember"
+              >同會員資料</label
+            >
           </div>
 
-    <!-- 收件地址 -->
+          <!-- 收件人姓名 & 聯絡電話 -->
+          <div class="gap-2 mb-4 d-md-flex">
+            <div style="flex: 1" class="mb-4 mb-md-0">
+              <label for="recipientName" class="form-label"
+                >收件人姓名 <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control placeholder-neutral-500"
+                id="recipientName"
+                placeholder="請填寫姓名"
+                style="height: 40px; width: 100%"
+              />
+            </div>
+            <div style="flex: 1">
+              <label for="phone" class="form-label"
+                >聯絡電話 <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control placeholder-neutral-500"
+                id="phone"
+                placeholder="請填寫聯絡電話"
+                style="height: 40px; width: 100%"
+              />
+            </div>
+          </div>
+
+          <!-- 收件地址 -->
           <div class="mb-4">
-            <label class="form-label">收件地址 <span class="text-danger">*</span></label>
-              <div class="d-flex flex-wrap gap-2 mb-4 d-flex flex-wrap flex-md-nowrap">
-                <div class="address-col-200 mb-md-0"> 
-                  <input type="text" class="form-control placeholder-neutral-500" placeholder="郵遞區號" style="height: 40px">
-                </div>
-                <div class="address-col-200 mb-md-0"> 
-                  <select class="form-select text-neutral-500" id="city-select" style="height: 40px;">
-                    <option value="" disabled selected>縣市</option>
-                  </select>
-                </div>
-                <div class="address-col-200 mb-md-0"> 
-                  <select class="form-select text-neutral-500" id="district-select" style="height: 40px;">
-                    <option value="" disabled selected>鄉鎮市區</option>
-                  </select>
-                </div>
-                <div class="address-col-624">
-                    <input type="text" class="form-control placeholder-neutral-500" placeholder="請輸入地址" style="height: 40px;">
-                </div>
+            <label class="form-label"
+              >收件地址 <span class="text-danger">*</span></label
+            >
+            <div
+              class="d-flex flex-wrap gap-2 mb-4 d-flex flex-wrap flex-md-nowrap"
+            >
+              <div class="address-col-200 mb-md-0">
+                <input
+                  type="text"
+                  class="form-control placeholder-neutral-500"
+                  placeholder="郵遞區號"
+                  style="height: 40px"
+                />
               </div>
+              <div class="address-col-200 mb-md-0">
+                <select
+                  class="form-select text-neutral-500"
+                  id="city-select"
+                  style="height: 40px"
+                >
+                  <option value="" disabled selected>縣市</option>
+                </select>
+              </div>
+              <div class="address-col-200 mb-md-0">
+                <select
+                  class="form-select text-neutral-500"
+                  id="district-select"
+                  style="height: 40px"
+                >
+                  <option value="" disabled selected>鄉鎮市區</option>
+                </select>
+              </div>
+              <div class="address-col-624">
+                <input
+                  type="text"
+                  class="form-control placeholder-neutral-500"
+                  placeholder="請輸入地址"
+                  style="height: 40px"
+                />
+              </div>
+            </div>
           </div>
 
-    <!-- 預計出貨日 -->
+          <!-- 預計出貨日 -->
           <div class="mb-4">
-            <label for="shipDate" class="form-label">預計出貨日 <span class="text-danger">*</span></label>
-              <div class="input-group shipdate-picker" style="max-width: 1248px;height: 40px;"> 
-                <input 
-                  type="text" class="form-control placeholder-neutral-500" 
-                  id="shipDate" placeholder="請選擇日期">
-                <button class="btn btn-outline-neutral date-text-trigger" type="button">
-                  <i class="bi bi-calendar"></i> 
-                </button>
-              </div>
+            <label for="shipDate" class="form-label"
+              >預計出貨日 <span class="text-danger">*</span></label
+            >
+            <div
+              class="input-group shipdate-picker"
+              style="max-width: 1248px; height: 40px"
+            >
+              <input
+                type="text"
+                class="form-control placeholder-neutral-500"
+                id="shipDate"
+                placeholder="請選擇日期"
+              />
+              <button
+                class="btn btn-outline-neutral date-text-trigger"
+                type="button"
+              >
+                <i class="bi bi-calendar"></i>
+              </button>
+            </div>
           </div>
 
-    <!-- 備註 -->
+          <!-- 備註 -->
           <div>
-            <label for="remarks" class="form-label text-neutral-800">備註</label>
-            <textarea class="form-control resize-none placeholder-neutral-500" id="remarks" placeholder="請填寫備註" style="max-width: 1248px;height: 160px"></textarea>
+            <label for="remarks" class="form-label text-neutral-800"
+              >備註</label
+            >
+            <textarea
+              class="form-control resize-none placeholder-neutral-500"
+              id="remarks"
+              placeholder="請填寫備註"
+              style="max-width: 1248px; height: 160px"
+            ></textarea>
           </div>
-
         </form>
       </div>
-    </section>
 
-    <!-- 付款方式 & 發票區塊 -->
-    <section class="container">
+      <!-- 付款方式 & 發票區塊 -->
       <div class="row flex-md-colomn g-6">
         <!-- 付款方式 -->
         <div class="col-md-6">
@@ -557,7 +741,7 @@
         </button>
       </div>
     </section>
-    
+
     <div class="bg-primary-800">
     <div class="container py-8 d-flex flex-column flex-lg-row align-items-center justify-content-between">
         <img class="mb-6 mb-lg-0" src="/Onon_Cake/assets/onon_logo-white-KR-_6pbF.svg" alt="onon_logo-white">
@@ -601,7 +785,7 @@
         </div>
 
     </div>
-</div><!-- 發票選項轉換 -->
+</div>    <!-- 發票選項轉換 -->
     <script>
       const select = document.getElementById("invoiceSelect");
       const personalBlock = document.getElementById("personalBlock");
@@ -617,71 +801,432 @@
         }
       });
 
-      document.addEventListener('DOMContentLoaded', () => {
-    
-    // 完整的台灣縣市與地區資料
-      const data = {
-        "基隆市": ["仁愛區", "信義區", "中正區", "中山區", "安樂區", "暖暖區", "七堵區"],
-        "臺北市": ["中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區", "士林區", "北投區", "內湖區", "南港區", "文山區"],
-        "新北市": ["萬里區", "金山區", "板橋區", "汐止區", "深坑區", "石碇區", "瑞芳區", "平溪區", "雙溪區", "貢寮區", "新店區", "坪林區", "烏來區", "永和區", "中和區", "土城區", "三峽區", "樹林區", "鶯歌區", "三重區", "新莊區", "泰山區", "林口區", "蘆洲區", "五股區", "淡水區", "三芝區", "石門區", "八里區"],
-        "桃園市": ["中壢區", "平鎮區", "龍潭區", "楊梅區", "新屋區", "觀音區", "桃園區", "龜山區", "八德區", "大溪區", "復興區", "大園區", "蘆竹區"],
-        "新竹市": ["東區", "北區", "香山區"],
-        "新竹縣": ["竹北市", "竹東鎮", "新埔鎮", "關西鎮", "湖口鄉", "新豐鄉", "峨眉鄉", "寶山鄉", "北埔鄉", "芎林鄉", "五峰鄉", "尖石鄉"],
-        "苗栗縣": ["苗栗市", "苑裡鎮", "通霄鎮", "竹南鎮", "頭份市", "後龍鎮", "卓蘭鎮", "大湖鄉", "公館鄉", "銅鑼鄉", "南庄鄉", "頭屋鄉", "三義鄉", "西湖鄉", "造橋鄉", "三灣鄉", "獅潭鄉", "泰安鄉"],
-        "臺中市": ["中區", "東區", "南區", "西區", "北區", "西屯區", "南屯區", "北屯區", "豐原區", "東勢區", "大甲區", "清水區", "沙鹿區", "梧棲區", "后里區", "神岡區", "潭子區", "大雅區", "新社區", "石岡區", "外埔區", "大安區", "烏日區", "大肚區", "龍井區", "霧峰區", "太平區", "大里區", "和平區"],
-        "彰化縣": ["彰化市", "員林市", "和美鎮", "鹿港鎮", "溪湖鎮", "田中鎮", "北斗鎮", "二林鎮", "線西鄉", "伸港鄉", "福興鄉", "秀水鄉", "花壇鄉", "芬園鄉", "大村鄉", "埔心鄉", "埔鹽鄉", "永靖鄉", "社頭鄉", "二水鄉", "田尾鄉", "埤頭鄉", "芳苑鄉", "大城鄉", "竹塘鄉", "溪州鄉"],
-        "南投縣": ["南投市", "埔里鎮", "草屯鎮", "竹山鎮", "集集鎮", "名間鄉", "鹿谷鄉", "中寮鄉", "魚池鄉", "國姓鄉", "水里鄉", "信義鄉", "仁愛鄉"],
-        "雲林縣": ["斗六市", "斗南鎮", "虎尾鎮", "西螺鎮", "土庫鎮", "北港鎮", "古坑鄉", "大埤鄉", "莿桐鄉", "林內鄉", "二崙鄉", "崙背鄉", "麥寮鄉", "東勢鄉", "褒忠鄉", "臺西鄉", "元長鄉", "四湖鄉", "口湖鄉", "水林鄉"],
-        "嘉義市": ["東區", "西區"],
-        "嘉義縣": ["太保市", "大林鎮", "民雄鄉", "溪口鄉", "新港鄉", "六腳鄉", "東石鄉", "義竹鄉", "布袋鎮", "鹿草鄉", "竹崎鄉", "梅山鄉", "番路鄉", "大埔鄉", "阿里山鄉", "中埔鄉", "水上鄉"],
-        "臺南市": ["中西區", "東區", "南區", "北區", "安平區", "安南區", "永康區", "歸仁區", "新化區", "左鎮區", "玉井區", "楠西區", "南化區", "仁德區", "關廟區", "龍崎區", "官田區", "麻豆區", "佳里區", "西港區", "七股區", "將軍區", "學甲區", "北門區", "新營區", "後壁區", "白河區", "東山區", "六甲區", "下營區", "柳營區", "鹽水區", "善化區", "大內區", "山上區", "新市區", "安定區"],
-        "高雄市": ["新興區", "前金區", "苓雅區", "鹽埕區", "鼓山區", "旗津區", "前鎮區", "三民區", "楠梓區", "小港區", "左營區", "仁武區", "大社區", "岡山區", "路竹區", "阿蓮區", "田寮區", "燕巢區", "橋頭區", "梓官區", "彌陀區", "永安區", "湖內區", "鳳山區", "大寮區", "林園區", "鳥松區", "大樹區", "旗山區", "美濃區", "六龜區", "內門區", "杉林區", "甲仙區", "桃源區", "那瑪夏區", "茂林區", "茄蓃區"],
-        "屏東縣": ["屏東市", "潮州鎮", "東港鎮", "恆春鎮", "萬丹鄉", "長治鄉", "麟洛鄉", "九如鄉", "里港鄉", "鹽埔鄉", "高樹鄉", "萬巒鄉", "內埔鄉", "竹田鄉", "新埤鄉", "枋寮鄉", "新園鄉", "崁頂鄉", "林邊鄉", "南州鄉", "佳冬鄉", "琉球鄉", "車城鄉", "滿州鄉", "枋山鄉", "三地門鄉", "霧臺鄉", "瑪家鄉", "泰武鄉", "來義鄉", "春日鄉", "獅子鄉", "牡丹鄉"],
-        "宜蘭縣": ["宜蘭市", "羅東鎮", "蘇澳鎮", "頭城鎮", "礁溪鄉", "壯圍鄉", "員山鄉", "冬山鄉", "五結鄉", "三星鄉", "大同鄉", "南澳鄉"],
-        "花蓮縣": ["花蓮市", "鳳林鎮", "玉里鎮", "新城鄉", "吉安鄉", "壽豐鄉", "光復鄉", "豐濱鄉", "瑞穗鄉", "萬榮鄉", "秀林鄉", "卓溪鄉", "富里鄉"],
-        "臺東縣": ["臺東市", "成功鎮", "關山鎮", "卑南鄉", "大武鄉", "太麻里鄉", "東河鄉", "長濱鄉", "鹿野鄉", "池上鄉", "綠島鄉", "蘭嶼鄉", "延平鄉", "海端鄉", "達仁鄉", "金峰鄉"],
+      document.addEventListener("DOMContentLoaded", () => {
+        // 完整的台灣縣市與地區資料
+        const data = {
+          基隆市: [
+            "仁愛區",
+            "信義區",
+            "中正區",
+            "中山區",
+            "安樂區",
+            "暖暖區",
+            "七堵區",
+          ],
+          臺北市: [
+            "中正區",
+            "大同區",
+            "中山區",
+            "松山區",
+            "大安區",
+            "萬華區",
+            "信義區",
+            "士林區",
+            "北投區",
+            "內湖區",
+            "南港區",
+            "文山區",
+          ],
+          新北市: [
+            "萬里區",
+            "金山區",
+            "板橋區",
+            "汐止區",
+            "深坑區",
+            "石碇區",
+            "瑞芳區",
+            "平溪區",
+            "雙溪區",
+            "貢寮區",
+            "新店區",
+            "坪林區",
+            "烏來區",
+            "永和區",
+            "中和區",
+            "土城區",
+            "三峽區",
+            "樹林區",
+            "鶯歌區",
+            "三重區",
+            "新莊區",
+            "泰山區",
+            "林口區",
+            "蘆洲區",
+            "五股區",
+            "淡水區",
+            "三芝區",
+            "石門區",
+            "八里區",
+          ],
+          桃園市: [
+            "中壢區",
+            "平鎮區",
+            "龍潭區",
+            "楊梅區",
+            "新屋區",
+            "觀音區",
+            "桃園區",
+            "龜山區",
+            "八德區",
+            "大溪區",
+            "復興區",
+            "大園區",
+            "蘆竹區",
+          ],
+          新竹市: ["東區", "北區", "香山區"],
+          新竹縣: [
+            "竹北市",
+            "竹東鎮",
+            "新埔鎮",
+            "關西鎮",
+            "湖口鄉",
+            "新豐鄉",
+            "峨眉鄉",
+            "寶山鄉",
+            "北埔鄉",
+            "芎林鄉",
+            "五峰鄉",
+            "尖石鄉",
+          ],
+          苗栗縣: [
+            "苗栗市",
+            "苑裡鎮",
+            "通霄鎮",
+            "竹南鎮",
+            "頭份市",
+            "後龍鎮",
+            "卓蘭鎮",
+            "大湖鄉",
+            "公館鄉",
+            "銅鑼鄉",
+            "南庄鄉",
+            "頭屋鄉",
+            "三義鄉",
+            "西湖鄉",
+            "造橋鄉",
+            "三灣鄉",
+            "獅潭鄉",
+            "泰安鄉",
+          ],
+          臺中市: [
+            "中區",
+            "東區",
+            "南區",
+            "西區",
+            "北區",
+            "西屯區",
+            "南屯區",
+            "北屯區",
+            "豐原區",
+            "東勢區",
+            "大甲區",
+            "清水區",
+            "沙鹿區",
+            "梧棲區",
+            "后里區",
+            "神岡區",
+            "潭子區",
+            "大雅區",
+            "新社區",
+            "石岡區",
+            "外埔區",
+            "大安區",
+            "烏日區",
+            "大肚區",
+            "龍井區",
+            "霧峰區",
+            "太平區",
+            "大里區",
+            "和平區",
+          ],
+          彰化縣: [
+            "彰化市",
+            "員林市",
+            "和美鎮",
+            "鹿港鎮",
+            "溪湖鎮",
+            "田中鎮",
+            "北斗鎮",
+            "二林鎮",
+            "線西鄉",
+            "伸港鄉",
+            "福興鄉",
+            "秀水鄉",
+            "花壇鄉",
+            "芬園鄉",
+            "大村鄉",
+            "埔心鄉",
+            "埔鹽鄉",
+            "永靖鄉",
+            "社頭鄉",
+            "二水鄉",
+            "田尾鄉",
+            "埤頭鄉",
+            "芳苑鄉",
+            "大城鄉",
+            "竹塘鄉",
+            "溪州鄉",
+          ],
+          南投縣: [
+            "南投市",
+            "埔里鎮",
+            "草屯鎮",
+            "竹山鎮",
+            "集集鎮",
+            "名間鄉",
+            "鹿谷鄉",
+            "中寮鄉",
+            "魚池鄉",
+            "國姓鄉",
+            "水里鄉",
+            "信義鄉",
+            "仁愛鄉",
+          ],
+          雲林縣: [
+            "斗六市",
+            "斗南鎮",
+            "虎尾鎮",
+            "西螺鎮",
+            "土庫鎮",
+            "北港鎮",
+            "古坑鄉",
+            "大埤鄉",
+            "莿桐鄉",
+            "林內鄉",
+            "二崙鄉",
+            "崙背鄉",
+            "麥寮鄉",
+            "東勢鄉",
+            "褒忠鄉",
+            "臺西鄉",
+            "元長鄉",
+            "四湖鄉",
+            "口湖鄉",
+            "水林鄉",
+          ],
+          嘉義市: ["東區", "西區"],
+          嘉義縣: [
+            "太保市",
+            "大林鎮",
+            "民雄鄉",
+            "溪口鄉",
+            "新港鄉",
+            "六腳鄉",
+            "東石鄉",
+            "義竹鄉",
+            "布袋鎮",
+            "鹿草鄉",
+            "竹崎鄉",
+            "梅山鄉",
+            "番路鄉",
+            "大埔鄉",
+            "阿里山鄉",
+            "中埔鄉",
+            "水上鄉",
+          ],
+          臺南市: [
+            "中西區",
+            "東區",
+            "南區",
+            "北區",
+            "安平區",
+            "安南區",
+            "永康區",
+            "歸仁區",
+            "新化區",
+            "左鎮區",
+            "玉井區",
+            "楠西區",
+            "南化區",
+            "仁德區",
+            "關廟區",
+            "龍崎區",
+            "官田區",
+            "麻豆區",
+            "佳里區",
+            "西港區",
+            "七股區",
+            "將軍區",
+            "學甲區",
+            "北門區",
+            "新營區",
+            "後壁區",
+            "白河區",
+            "東山區",
+            "六甲區",
+            "下營區",
+            "柳營區",
+            "鹽水區",
+            "善化區",
+            "大內區",
+            "山上區",
+            "新市區",
+            "安定區",
+          ],
+          高雄市: [
+            "新興區",
+            "前金區",
+            "苓雅區",
+            "鹽埕區",
+            "鼓山區",
+            "旗津區",
+            "前鎮區",
+            "三民區",
+            "楠梓區",
+            "小港區",
+            "左營區",
+            "仁武區",
+            "大社區",
+            "岡山區",
+            "路竹區",
+            "阿蓮區",
+            "田寮區",
+            "燕巢區",
+            "橋頭區",
+            "梓官區",
+            "彌陀區",
+            "永安區",
+            "湖內區",
+            "鳳山區",
+            "大寮區",
+            "林園區",
+            "鳥松區",
+            "大樹區",
+            "旗山區",
+            "美濃區",
+            "六龜區",
+            "內門區",
+            "杉林區",
+            "甲仙區",
+            "桃源區",
+            "那瑪夏區",
+            "茂林區",
+            "茄蓃區",
+          ],
+          屏東縣: [
+            "屏東市",
+            "潮州鎮",
+            "東港鎮",
+            "恆春鎮",
+            "萬丹鄉",
+            "長治鄉",
+            "麟洛鄉",
+            "九如鄉",
+            "里港鄉",
+            "鹽埔鄉",
+            "高樹鄉",
+            "萬巒鄉",
+            "內埔鄉",
+            "竹田鄉",
+            "新埤鄉",
+            "枋寮鄉",
+            "新園鄉",
+            "崁頂鄉",
+            "林邊鄉",
+            "南州鄉",
+            "佳冬鄉",
+            "琉球鄉",
+            "車城鄉",
+            "滿州鄉",
+            "枋山鄉",
+            "三地門鄉",
+            "霧臺鄉",
+            "瑪家鄉",
+            "泰武鄉",
+            "來義鄉",
+            "春日鄉",
+            "獅子鄉",
+            "牡丹鄉",
+          ],
+          宜蘭縣: [
+            "宜蘭市",
+            "羅東鎮",
+            "蘇澳鎮",
+            "頭城鎮",
+            "礁溪鄉",
+            "壯圍鄉",
+            "員山鄉",
+            "冬山鄉",
+            "五結鄉",
+            "三星鄉",
+            "大同鄉",
+            "南澳鄉",
+          ],
+          花蓮縣: [
+            "花蓮市",
+            "鳳林鎮",
+            "玉里鎮",
+            "新城鄉",
+            "吉安鄉",
+            "壽豐鄉",
+            "光復鄉",
+            "豐濱鄉",
+            "瑞穗鄉",
+            "萬榮鄉",
+            "秀林鄉",
+            "卓溪鄉",
+            "富里鄉",
+          ],
+          臺東縣: [
+            "臺東市",
+            "成功鎮",
+            "關山鎮",
+            "卑南鄉",
+            "大武鄉",
+            "太麻里鄉",
+            "東河鄉",
+            "長濱鄉",
+            "鹿野鄉",
+            "池上鄉",
+            "綠島鄉",
+            "蘭嶼鄉",
+            "延平鄉",
+            "海端鄉",
+            "達仁鄉",
+            "金峰鄉",
+          ],
         };
-      const citySelect = document.getElementById('city-select');
-      const districtSelect = document.getElementById('district-select');
-    
-    // 如果元素不存在，則退出 (避免錯誤)
-      if (!citySelect || !districtSelect) return;
+        const citySelect = document.getElementById("city-select");
+        const districtSelect = document.getElementById("district-select");
 
-      function createOption(value, text) {
-          const option = document.createElement('option');
+        // 如果元素不存在，則退出 (避免錯誤)
+        if (!citySelect || !districtSelect) return;
+
+        function createOption(value, text) {
+          const option = document.createElement("option");
           option.value = value;
           option.textContent = text;
           return option;
         }
 
-    // 填充縣市
-      function populateCities() {
+        // 填充縣市
+        function populateCities() {
           districtSelect.disabled = true;
-          Object.keys(data).forEach(city => {
-              citySelect.appendChild(createOption(city, city));
+          Object.keys(data).forEach((city) => {
+            citySelect.appendChild(createOption(city, city));
           });
         }
 
-    // 監聽縣市改變
-      citySelect.addEventListener('change', function() {
+        // 監聽縣市改變
+        citySelect.addEventListener("change", function () {
           const selectedCity = this.value;
           const districts = data[selectedCity] || [];
-          
-          districtSelect.innerHTML = '';
+
+          districtSelect.innerHTML = "";
           districtSelect.appendChild(createOption("", "鄉鎮市區"));
-          districtSelect.querySelector('option').disabled = true;
-          districtSelect.querySelector('option').selected = true;
-          
+          districtSelect.querySelector("option").disabled = true;
+          districtSelect.querySelector("option").selected = true;
+
           if (districts.length > 0) {
-              districts.forEach(district => {
-                  districtSelect.appendChild(createOption(district, district));
-              });
-              districtSelect.disabled = false;
+            districts.forEach((district) => {
+              districtSelect.appendChild(createOption(district, district));
+            });
+            districtSelect.disabled = false;
           } else {
-              districtSelect.disabled = true;
+            districtSelect.disabled = true;
           }
         });
-          populateCities();
+        populateCities();
       });
     </script>
 
@@ -689,35 +1234,37 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <script>
-    // JavaScript 程式碼：使用 jQuery UI 啟動日期選擇器
+      // JavaScript 程式碼：使用 jQuery UI 啟動日期選擇器
 
-    $(document).ready(function() {
-    // 1. 設定日期選擇器功能
-    // 這會將日期選擇功能綁定到 id="shipDate" 的輸入欄位
-    $("#shipDate").datepicker({
-        dateFormat: "yy/mm/dd", // 設定顯示的日期格式 (例如 2025/12/31)
-        showOn: "button",       // 讓它只在點擊按鈕時顯示
-        buttonText: "選擇日期", // 隱藏按鈕文字
-        buttonImage: "none",    // 隱藏預設按鈕圖片
-    });
+      $(document).ready(function () {
+        // 1. 設定日期選擇器功能
+        // 這會將日期選擇功能綁定到 id="shipDate" 的輸入欄位
+        $("#shipDate").datepicker({
+          dateFormat: "yy/mm/dd", // 設定顯示的日期格式 (例如 2025/12/31)
+          showOn: "button", // 讓它只在點擊按鈕時顯示
+          buttonText: "選擇日期", // 隱藏按鈕文字
+          buttonImage: "none", // 隱藏預設按鈕圖片
+        });
 
-    // 2. 移除原生按鈕，改用我們手動的按鈕觸發
-    // jQuery UI 會自動創建一個按鈕，我們需要將其替換為我們的自訂按鈕
-        const $jqueryUIButton = $("#shipDate").siblings(".ui-datepicker-trigger");
-        const $customButton = $('.date-text-trigger');
+        // 2. 移除原生按鈕，改用我們手動的按鈕觸發
+        // jQuery UI 會自動創建一個按鈕，我們需要將其替換為我們的自訂按鈕
+        const $jqueryUIButton = $("#shipDate").siblings(
+          ".ui-datepicker-trigger"
+        );
+        const $customButton = $(".date-text-trigger");
 
-    if ($jqueryUIButton.length && $customButton.length) {
-    // 將 jQuery UI 的點擊事件複製到我們的按鈕上
-        $customButton.on('click', function(e) {
-        e.preventDefault();
-    // 觸發原生 jQuery UI 的按鈕點擊事件
-        $jqueryUIButton.trigger('click'); 
-    });
-        
-    // 隱藏 jQuery UI 自動生成的按鈕，只顯示我們的圖示按鈕
-        $jqueryUIButton.hide();
+        if ($jqueryUIButton.length && $customButton.length) {
+          // 將 jQuery UI 的點擊事件複製到我們的按鈕上
+          $customButton.on("click", function (e) {
+            e.preventDefault();
+            // 觸發原生 jQuery UI 的按鈕點擊事件
+            $jqueryUIButton.trigger("click");
+          });
+
+          // 隱藏 jQuery UI 自動生成的按鈕，只顯示我們的圖示按鈕
+          $jqueryUIButton.hide();
         }
-    });
+      });
     </script>
 
   </body>
