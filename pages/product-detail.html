@@ -84,8 +84,8 @@
             <h3 class="fw-bold mb-0 text-primary-800 fs-lg-2">
               經典可麗露禮盒
             </h3>
-            <button class="btn p-0 border-0 bg-transparent">
-              <i class="bi bi-heart fs-4"></i>
+            <button id="heartBtn" class="btn p-0 border-0 bg-transparent">
+              <i id="heartIcon" class="bi bi-heart fs-4"></i>
             </button>
           </div>
 
@@ -441,6 +441,18 @@
     </section>
 
     <%- include('./layout/footer'); -%>
+
+    <!-- 點擊愛心變紅色 -->
+    <script>
+      document
+        .getElementById("heartBtn")
+        .addEventListener("click", function () {
+          const icon = document.getElementById("heartIcon");
+          icon.classList.toggle("bi-heart");
+          icon.classList.toggle("bi-heart-fill");
+          icon.classList.toggle("text-danger"); // 切換 Bootstrap 紅色
+        });
+    </script>
 
     <script type="module" src="../main.js"></script>
   </body>

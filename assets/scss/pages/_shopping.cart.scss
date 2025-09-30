@@ -98,3 +98,15 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+
+.coupons {
+  // 設置使用者輸入文字的顏色 (可選)
+  color: $neutral-500; 
+
+  // 設置 Placeholder 偽元素的顏色 (跨瀏覽器寫法)
+  &::placeholder {
+    color: $neutral-500; // 設定您想要的紫色或其他顏色
+    opacity: 1; /* 這是關鍵！確保不會被瀏覽器預設的半透明覆蓋 */
+  }
+}

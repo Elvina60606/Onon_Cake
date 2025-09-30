@@ -40,7 +40,7 @@
   background-color: $neutral-100;
   padding: 8px 12px;
 
-  &:hover {
+  &:hover,:active {
     color: $alert-500;
     background-color: $alert-50;
   }

@@ -64,15 +64,16 @@
                         class="input-group input-group-sm border rounded-2 bg-white"
                         style="width: 130px"
                       >
-                        <button class="btn" type="button">
+                        <button class="btn btn-decrease" type="button">
                           <i class="bi bi-dash-lg"></i>
                         </button>
                         <input
                           type="number"
-                          class="form-control fs-6 fw-bold text-center border-0"
+                          class="form-control fs-6 fw-bold text-center border-0 quantity-input"
                           value="1"
+                          min="1"
                         />
-                        <button class="btn" type="button">
+                        <button class="btn btn-increase" type="button">
                           <i class="bi bi-plus-lg"></i>
                         </button>
                       </div>
@@ -118,15 +119,16 @@
                         class="input-group input-group-sm border rounded-2 bg-white"
                         style="width: 130px"
                       >
-                        <button class="btn" type="button">
+                        <button class="btn btn-decrease" type="button">
                           <i class="bi bi-dash-lg"></i>
                         </button>
                         <input
                           type="number"
-                          class="form-control fs-6 fw-bold text-center border-0"
+                          class="form-control fs-6 fw-bold text-center border-0 quantity-input"
                           value="2"
+                          min="1"
                         />
-                        <button class="btn" type="button">
+                        <button class="btn btn-increase" type="button">
                           <i class="bi bi-plus-lg"></i>
                         </button>
                       </div>
@@ -355,7 +357,7 @@
               <div class="address-col-624">
                 <input
                   type="text"
-                  class="form-control placeholder-neutral-500"
+                  class="form-control"
                   placeholder="請輸入地址"
                   style="height: 40px"
                 />
@@ -1065,6 +1067,53 @@
       });
     </script>
 
-    <script type="module" src="../main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const decreaseBtn = document.querySelector(".btn-decrease");
+        const increaseBtn = document.querySelector(".btn-increase");
+        const input = document.querySelector(".quantity-input");
+
+        // 減少
+        decreaseBtn.addEventListener("click", () => {
+          let currentValue = parseInt(input.value) || 1;
+          if (currentValue > 1) {
+            input.value = currentValue - 1;
+          }
+        });
+
+        // 增加
+        increaseBtn.addEventListener("click", () => {
+          let currentValue = parseInt(input.value) || 1;
+          input.value = currentValue + 1;
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 取得所有商品的加減控制區
+        document.querySelectorAll(".input-group").forEach((group) => {
+          const decreaseBtn = group.querySelector(".btn-decrease");
+          const increaseBtn = group.querySelector(".btn-increase");
+          const input = group.querySelector(".quantity-input");
+
+          // 減少
+          decreaseBtn.addEventListener("click", () => {
+            let currentValue = parseInt(input.value) || 1;
+            if (currentValue > 1) {
+              input.value = currentValue - 1;
+            }
+          });
+
+          // 增加
+          increaseBtn.addEventListener("click", () => {
+            let currentValue = parseInt(input.value) || 1;
+            input.value = currentValue + 1;
+          });
+        });
+      });
+    </script>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
