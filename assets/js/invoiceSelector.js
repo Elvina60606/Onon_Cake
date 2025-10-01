@@ -1,5 +1,5 @@
 // invoiceSelector.js
-import initManager from "./initManage.js";
+import initManager from "./initManager.js";
 
 function initInvoiceSelector() {
   const select = document.getElementById("invoiceSelect");

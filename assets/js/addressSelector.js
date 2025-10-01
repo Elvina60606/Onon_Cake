@@ -1,4 +1,4 @@
-import initManager from "./initManage.js";
+import initManager from "./initManager.js";
 
 document.addEventListener("DOMContentLoaded", () => {
         // 完整的台灣縣市與地區資料

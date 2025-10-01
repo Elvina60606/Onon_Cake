@@ -1,4 +1,4 @@
-import initManager from "./initManage.js";
+import initManager from "./initManager.js";
 
 // JavaScript 程式碼：使用 jQuery UI 啟動日期選擇器
 

@@ -1,4 +1,4 @@
- import initManager from "./initManage.js";
+ import initManager from "./initManager.js";
 
  // 初始化輪播圖，設定為手動控制
       const carousel = new bootstrap.Carousel("#heroCarousel", {
