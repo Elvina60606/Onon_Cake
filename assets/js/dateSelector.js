@@ -1,3 +1,5 @@
+import initManager from "./initManage.js";
+
 // JavaScript 程式碼：使用 jQuery UI 啟動日期選擇器
 
       $(document).ready(function () {
@@ -29,3 +31,6 @@
           $jqueryUIButton.hide();
         }
       });
+
+// 把初始化函式註冊給 initManager
+initManager.add(initInvoiceSelector);

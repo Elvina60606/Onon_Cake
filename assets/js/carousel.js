@@ -1,3 +1,5 @@
+ import initManager from "./initManage.js";
+
  // 初始化輪播圖，設定為手動控制
       const carousel = new bootstrap.Carousel("#heroCarousel", {
         interval: false, // 關閉自動輪播
@@ -23,3 +25,6 @@
           carousel.next();
         }
       });
+
+// 把初始化函式註冊給 initManager
+initManager.add(initInvoiceSelector);

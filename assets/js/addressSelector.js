@@ -1,3 +1,5 @@
+import initManager from "./initManage.js";
+
 document.addEventListener("DOMContentLoaded", () => {
         // 完整的台灣縣市與地區資料
         const data = {
@@ -425,3 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         populateCities();
       });
+
+
+// 把初始化函式註冊給 initManager
+initManager.add(initInvoiceSelector);
