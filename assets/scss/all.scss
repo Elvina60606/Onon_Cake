@@ -8,7 +8,7 @@
 @import "../../node_modules/bootstrap";
 
 // 4. Base (字體、reset)
-@import "./base/topography";   // 字體/排版設定
+@import "./base/typography";   // 字體/排版設定
 @import './base/reset';        // Reset 必須在 utilities 之前
 
 // 5. Utilities (自定義工具類)
