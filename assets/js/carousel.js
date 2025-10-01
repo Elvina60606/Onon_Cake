@@ -27,4 +27,4 @@
       });
 
 // 把初始化函式註冊給 initManager
-initManager.add(initInvoiceSelector);
+initManager.add(initcarousel);
