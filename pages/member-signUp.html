@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
+    <title>Onon_cake｜會員註冊</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -56,7 +56,7 @@
                            href="privacy-policy.html">
                           隱私權政策／服務條款
                         </a>
-                      ，同意本網站所提拱的服務。
+                      ，同意本網站所提供的服務。
                 </label>
             </div>
       </div>
@@ -100,13 +100,14 @@
             </div>
         <!--電話-->
             <div class="mb-3">
-                <label for="memberPhone" 
+                <label for="memberTel" 
                        class="form-label">
                        <span class="fs-5 ps-2">電話</span>
                 </label>
-                <input type="number" 
+                <input type="tel"
+                       pattern="09\d{8}" 
                        class="form-control" 
-                       id="memberPhone" 
+                       id="memberTel" 
                        placeholder="">
             </div>
           </div>
@@ -145,41 +146,13 @@
                 <input type="text" class="form-control" id="postCode" placeholder="郵遞區號">
               </div>
               <div class="col-4 col-md-auto pt-38">
-                <label class="visually-hidden" for="city">縣市</label>
-                <select class="form-select" id="city">
-                  <option selected>縣市</option>
-                  <option value="keelungCounty">基隆市</option>
-                  <option value="taipeiCity">台北市</option>
-                  <option value="newTaipeiCity">新北市</option>
-                  <option value="taoyuanCity">桃園市</option>
-                  <option value="hsinchuCity">新竹市</option>
-                  <option value="hsinchuCounty">新竹縣</option>
-                  <option value="miaoliCounty">苗栗縣</option>
-                  <option value="taichungCity">台中市</option>
-                  <option value="changhuaCounty">彰化縣</option>
-                  <option value="nantouCounty">南投縣</option>
-                  <option value="yunlinCounty">雲林縣</option>
-                  <option value="chiayiCounty">嘉義縣</option>
-                  <option value="tainanCity">台南市</option>
-                  <option value="kaohsiungCity">高雄市</option>
-                  <option value="pingtungCounty">屏東縣</option>
-                  <option value="yilanCounty">宜蘭縣</option>
-                  <option value="hualienCounty">花蓮縣</option>
-                  <option value="taitungCounty">台東縣</option>
-                  <option value="outlyingIslandDistrict">外島地區</option>
+                <select class="form-select"  id="city-select">
+                  <option value="" disabled selected>縣市</option>
                 </select>
               </div>
               <div class="col-4 col-md-auto pt-38">
-                <label class="visually-hidden" for="district">鄉鎮市區</label>
-                <select class="form-select" id="district">
-                  <option selected>鄉鎮市區</option>
-                  <option value="daan">大安區</option>
-                  <option value="zhongshan">中山區</option>
-                  <option value="xinyi">信義區</option>
-                  <option value="wanhua">萬華區</option>
-                  <option value="beitou">北投區</option>
-                  <option value="shilin">士林區</option>
-                  <option value="songshan">松山區</option>
+                <select class="form-select" id="district-select">
+                  <option value="" disabled selected>鄉鎮市區</option>
                 </select>
               </div>
             </div>
@@ -194,7 +167,7 @@
                    placeholder="請輸入地址"
             >
           </div>
-
+  <!--確認送出btn-->
           <div class="col-4 col-lg-5">
             <a class="d-block btn btn-confirm btn-primary-300 text-white fs-6 fs-lg-5 pointer" 
                data-bs-toggle="modal" 
@@ -203,7 +176,7 @@
             </a>
           </div>
       </div>
-<!--確認送出btn-->
+
   <!--註冊成功modal-->
        <div class="modal fade" 
                  id="signUpConfirm" 
@@ -228,7 +201,7 @@
                     </div>
                     <div class="col-7">
                       <h6 class="fs-lg-5 mb-1">恭喜您註冊成功！</h6>
-                      <p class="fs-7 fs-lg-6 mb-2">首購折扣優惠卷已匯入您的帳戶</p>
+                      <p class="fs-7 fs-lg-6 mb-2">首購折扣優惠卷已匯入帳戶</p>
                       <a class="d-block btn btn-confirm btn-primary-300 text-white w-75 mb-2 me-auto pointer" 
                          href="member-login.html">立即登入
                       </a>

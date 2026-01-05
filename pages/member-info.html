@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
+    <title>Onon_cake｜會員中心</title>
   </head>
   <body>
     <div class="d-flex flex-column" style="min-height: 100dvh">
@@ -12,8 +12,112 @@
   
       <main class="container py-11 mb-auto">
         <div class="row justify-content-center">
-        <!--左側side bar-->
-          <aside class="col-3">
+        <!--手機版side bar-->
+          <aside class="col-12 d-md-none">
+            <ul class="d-flex flex-wrap justify-content-around align-items-center li-style-none p-0 mb-9 gap-3" 
+                id="myTab" 
+                role="tablist"
+            >
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 active btn btn-primary-300 border border-0 rounded-circle" 
+                            id="modifyMemberInfo-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#modifyMemberInfo" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="modifyMemberInfo" 
+                            aria-selected="true">
+                            <span class="h6 text-primary-800">修改會員<br>資料</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 btn btn-primary-300 border border-0 rounded-circle" 
+                            id="changePassword-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#changePassword" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="changePassword" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">修改密碼</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 btn btn-primary-300 border border-0 rounded-circle" 
+                            id="shoppingHistory-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#shoppingHistory" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="shoppingHistory" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">訂單紀錄</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 btn btn-primary-300 border border-0 rounded-circle" 
+                            id="couponAndPoint-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#couponAndPoint" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="couponAndPoint" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">優惠卷<br>＆點數</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 btn btn-primary-300 border border-0 rounded-circle" 
+                            id="prePaidPlan-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#prePaidPlan" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="prePaidPlan" 
+                            aria-selected="false">
+                            <span class="h6 text-primary-800">寄甜計劃</span>
+                    </button>
+                </li>
+                <li class="pointer" role="presentation">
+                    <button class="nav-link w-100 pb-2 btn btn-primary-300 border border-0 rounded-circle" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#logOut" 
+                            type="button">
+                            <span class="h6 text-primary-800">登出</span>
+                    </button>
+                </li>
+            </ul>
+        <!--登出modal-->
+            <div class="modal fade" 
+                 id="logOut" 
+                 data-bs-backdrop="static" 
+                 data-bs-keyboard="false" 
+                 tabindex="-1" 
+                 aria-labelledby="logOutLabel" 
+                 aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body ms-7 mt-7">
+                    <p class="fs-5">確定要登出嗎？</p>
+                  </div>
+                  <div class="modal-footer border-0">
+                    <a href="member-login.html" 
+                       class="btn btn-confirm btn-primary-300 text-white">
+                        確定登出
+                    </a>
+                    <button type="button" 
+                            class="btn btn-confirm btn-primary-300 text-white" 
+                            data-bs-dismiss="modal">
+                            關閉
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        <!--桌機版side bar-->
+          <aside class="col-3 d-none d-md-block">
             <ul class="d-flex flex-column justify-content-center align-items-center p-0 m-0 border rounded-3 li-style-none overflow-hidden" 
                 id="myTab" 
                 role="tablist"
@@ -84,7 +188,7 @@
                 <li class="w-100 border-bottom sideBar-hover" role="presentation">
                     <button class="nav-link w-100 py-4 " 
                             data-bs-toggle="modal" 
-                            data-bs-target="#logOut" 
+                            data-bs-target="#desk-logOut" 
                             type="button">
                             <span class="h5 text-primary-800">登出</span>
                     </button>
@@ -92,35 +196,35 @@
             </ul>
         <!--登出modal-->
             <div class="modal fade" 
-                 id="logOut" 
+                 id="desk-logOut" 
                  data-bs-backdrop="static" 
                  data-bs-keyboard="false" 
                  tabindex="-1" 
-                 aria-labelledby="logOutLabel" 
+                 aria-labelledby="desk-logOutLabel" 
                  aria-hidden="true"
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-body">
-                    <p class="ms-4 mt-6">確定要登出嗎？</p>
+                  <div class="modal-body ms-7 mt-7">
+                    <p class="fs-5">確定要登出嗎？</p>
                   </div>
                   <div class="modal-footer border-0">
-                    <a href="index.html" 
-                       class="btn btn-primary">
+                    <a href="member-login.html" 
+                       class="btn btn-confirm btn-primary-300 text-white">
                         確定登出
                     </a>
                     <button type="button" 
-                            class="btn btn-primary" 
+                            class="btn btn-confirm btn-primary-300 text-white" 
                             data-bs-dismiss="modal">
                             關閉
                     </button>
                   </div>
-    </div>
-  </div>
-</div>
+                </div>
+              </div>
+            </div>
           </aside>
         <!--右側內容-->
-          <div class="col-8">
+          <div class="col-md-8">
             <div class="tab-content">
         <!--修改會員資料內容-->
               <div class="tab-pane active" 
@@ -164,7 +268,8 @@
                              class="form-label">
                          <span class="fs-5 ps-2">電話</span>
                       </label>
-                      <input type="number" 
+                      <input type="tel"
+                             pattern="09\d{8}"  
                              class="form-control" 
                              id="memberPhone" 
                              placeholder="">
@@ -203,41 +308,13 @@
                           <input type="text" class="form-control" id="postCode" placeholder="郵遞區號">
                         </div>
                         <div class="col-4 pt-38">
-                          <label class="visually-hidden" for="city">縣市</label>
-                          <select class="form-select" id="city">
-                            <option selected>縣市</option>
-                            <option value="keelungCounty">基隆市</option>
-                            <option value="taipeiCity">台北市</option>
-                            <option value="newTaipeiCity">新北市</option>
-                            <option value="taoyuanCity">桃園市</option>
-                            <option value="hsinchuCity">新竹市</option>
-                            <option value="hsinchuCounty">新竹縣</option>
-                            <option value="miaoliCounty">苗栗縣</option>
-                            <option value="taichungCity">台中市</option>
-                            <option value="changhuaCounty">彰化縣</option>
-                            <option value="nantouCounty">南投縣</option>
-                            <option value="yunlinCounty">雲林縣</option>
-                            <option value="chiayiCounty">嘉義縣</option>
-                            <option value="tainanCity">台南市</option>
-                            <option value="kaohsiungCity">高雄市</option>
-                            <option value="pingtungCounty">屏東縣</option>
-                            <option value="yilanCounty">宜蘭縣</option>
-                            <option value="hualienCounty">花蓮縣</option>
-                            <option value="taitungCounty">台東縣</option>
-                            <option value="outlyingIslandDistrict">外島地區</option>
+                          <select class="form-select" id="city-select">
+                            <option value="" disabled selected>縣市</option>
                           </select>
                         </div>
                         <div class="col-4 pt-38">
-                          <label class="visually-hidden" for="district">鄉鎮市區</label>
-                          <select class="form-select" id="district">
-                            <option selected>鄉鎮市區</option>
-                            <option value="daan">大安區</option>
-                            <option value="zhongshan">中山區</option>
-                            <option value="xinyi">信義區</option>
-                            <option value="wanhua">萬華區</option>
-                            <option value="beitou">北投區</option>
-                            <option value="shilin">士林區</option>
-                            <option value="songshan">松山區</option>
+                          <select class="form-select" id="district-select">
+                            <option value="" disabled selected>鄉鎮市區</option>
                           </select>
                         </div>
                       </div>
@@ -429,12 +506,6 @@
                     </div>
                 </div>
   
-  
-  
-  
-  
-  
-  
               </div>
         <!--訂單紀錄內容-->
               <div class="tab-pane" 
@@ -458,11 +529,8 @@
                    role="tabpanel" 
                    aria-labelledby="prePaidPlan-tab" 
                    tabindex="0">
-                    <p class="fs-4">寄甜功能待開發中...</p>
+                    <p class="fs-4">寄甜計畫功能待開發中...</p>
               </div>
-
-
-
 
             </div>
           </div>
@@ -472,23 +540,6 @@
       <%- include('./layout/footer'); -%>
       
     </div>
-    
-     <!-- 發票選項轉換 -->
-    <script>
-      const select = document.getElementById("invoiceSelect");
-      const personalBlock = document.getElementById("personalBlock");
-      const companyBlock = document.getElementById("companyBlock");
-
-      select.addEventListener("change", function () {
-        if (this.value === "personalInvoice") {
-          personalBlock.style.display = "block";
-          companyBlock.style.display = "none";
-        } else {
-          personalBlock.style.display = "none";
-          companyBlock.style.display = "block";
-        }
-      });
-    </script>
 
     <script type="module" src="../main.js"></script>
   </body>
