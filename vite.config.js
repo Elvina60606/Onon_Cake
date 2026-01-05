@@ -28,9 +28,9 @@ export default defineConfig({
   // base: '/Repository 的名稱/'
   base: '/Onon_Cake/',
   plugins: [
-    liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
-    ViteEjsPlugin(),
-    moveOutputPlugin(),
+    //liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']), 『先暫時關閉多頁設定』
+    //ViteEjsPlugin(),
+    //moveOutputPlugin(),
     react(),
   ],
   server: {

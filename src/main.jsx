@@ -6,6 +6,10 @@ import App from './App'
 
 
 
-ReactDOM.createRoot(
-  document.querySelector('#root')
-).render(<App />)
+ReactDOM
+  .createRoot(document.querySelector('#root'))
+  .render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  )
